@@ -47,5 +47,10 @@ namespace BankingSystem
             int width = (tabCreateAcc.Width - 19) / 5;
             tabCreateAcc.ItemSize = new Size(width, 50);
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

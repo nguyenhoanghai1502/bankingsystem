@@ -59,14 +59,14 @@ namespace BankingSystem
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(235, 20);
-            this.txtpassword.TabIndex = 3;
+            this.txtpassword.TabIndex = 2;
             // 
             // txtusername
             // 
             this.txtusername.Location = new System.Drawing.Point(123, 23);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(235, 20);
-            this.txtusername.TabIndex = 2;
+            this.txtusername.TabIndex = 1;
             // 
             // label2
             // 
@@ -104,7 +104,7 @@ namespace BankingSystem
             this.checkboxadmin.Location = new System.Drawing.Point(20, 15);
             this.checkboxadmin.Name = "checkboxadmin";
             this.checkboxadmin.Size = new System.Drawing.Size(55, 17);
-            this.checkboxadmin.TabIndex = 2;
+            this.checkboxadmin.TabIndex = 3;
             this.checkboxadmin.Text = "Admin";
             this.checkboxadmin.UseVisualStyleBackColor = true;
             // 
@@ -114,7 +114,7 @@ namespace BankingSystem
             this.btnexit.Location = new System.Drawing.Point(283, 15);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(75, 31);
-            this.btnexit.TabIndex = 1;
+            this.btnexit.TabIndex = 5;
             this.btnexit.Text = "Exit";
             this.btnexit.UseVisualStyleBackColor = true;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
@@ -125,7 +125,7 @@ namespace BankingSystem
             this.btnlogin.Location = new System.Drawing.Point(174, 11);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(75, 35);
-            this.btnlogin.TabIndex = 0;
+            this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
@@ -137,6 +137,7 @@ namespace BankingSystem
             this.ClientSize = new System.Drawing.Size(403, 200);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Location = new System.Drawing.Point(500, 500);
             this.Name = "frmLogin";
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
