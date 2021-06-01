@@ -14,6 +14,8 @@ namespace BankingSystem.DAO
     {
         private static DataProvider instance;
         private string connectionstr = "Data Source=desktop-qen4lji\\mssqlserver01;Initial Catalog=BANKMANAGEMENTSYSTEM;Integrated Security=True";
+        protected SqlDataAdapter dt;
+        protected SqlCommand cm;
 
         public static DataProvider Instance 
         {
@@ -37,6 +39,20 @@ namespace BankingSystem.DAO
                 connection.Close();
             }
             return data;    
+        }
+        public bool ExecuteNonQuery(string query, byte[] pic=null)
+        {
+            int data = 0;
+            using (SqlConnection connection = new SqlConnection(connectionstr))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandText = query;
+                command.Parameters.AddWithValue("@Pic", pic);
+                data = command.ExecuteNonQuery();
+                connection.Close();
+            }
+            return data > 0;
         }
     }
 }

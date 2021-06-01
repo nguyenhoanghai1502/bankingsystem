@@ -74,7 +74,7 @@ namespace BankingSystem
             this.txtADGender = new System.Windows.Forms.TextBox();
             this.txtADPhone = new System.Windows.Forms.TextBox();
             this.txtADAdd = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtADDOB = new System.Windows.Forms.TextBox();
             this.txtADAccTitle = new System.Windows.Forms.TextBox();
             this.txtADType = new System.Windows.Forms.TextBox();
             this.txtADNum = new System.Windows.Forms.TextBox();
@@ -91,7 +91,7 @@ namespace BankingSystem
             this.label58 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptrProfileAD = new System.Windows.Forms.PictureBox();
             this.grbADSearch = new System.Windows.Forms.GroupBox();
             this.btnADSearch = new MetroFramework.Controls.MetroButton();
             this.txtADTitle = new System.Windows.Forms.TextBox();
@@ -283,7 +283,7 @@ namespace BankingSystem
             this.grbUASearch.SuspendLayout();
             this.tabAccDetail.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrProfileAD)).BeginInit();
             this.grbADSearch.SuspendLayout();
             this.tabTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvTransaction)).BeginInit();
@@ -409,7 +409,7 @@ namespace BankingSystem
             this.tabCreateAcc.Margin = new System.Windows.Forms.Padding(0);
             this.tabCreateAcc.Multiline = true;
             this.tabCreateAcc.Name = "tabCreateAcc";
-            this.tabCreateAcc.SelectedIndex = 1;
+            this.tabCreateAcc.SelectedIndex = 0;
             this.tabCreateAcc.Size = new System.Drawing.Size(733, 604);
             this.tabCreateAcc.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabCreateAcc.Style = MetroFramework.MetroColorStyle.Lime;
@@ -463,6 +463,7 @@ namespace BankingSystem
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Save";
             this.btnSave.UseSelectable = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel14
             // 
@@ -484,6 +485,7 @@ namespace BankingSystem
             this.btnChangeImage.TabIndex = 17;
             this.btnChangeImage.Text = "Change Image";
             this.btnChangeImage.UseSelectable = true;
+            this.btnChangeImage.Click += new System.EventHandler(this.btnChangeImage_Click);
             // 
             // profilePictr
             // 
@@ -503,6 +505,10 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbUAType.FormattingEnabled = true;
+            this.cbUAType.Items.AddRange(new object[] {
+            "Normal",
+            "V.I.P",
+            "Standard"});
             this.cbUAType.Location = new System.Drawing.Point(190, 233);
             this.cbUAType.Name = "cbUAType";
             this.cbUAType.Size = new System.Drawing.Size(308, 21);
@@ -702,6 +708,7 @@ namespace BankingSystem
             this.btnUASearch.TabIndex = 8;
             this.btnUASearch.Text = "Search";
             this.btnUASearch.UseSelectable = true;
+            this.btnUASearch.Click += new System.EventHandler(this.btnUASearch_Click);
             // 
             // txtUASearchNum
             // 
@@ -725,7 +732,7 @@ namespace BankingSystem
             // tabAccDetail
             // 
             this.tabAccDetail.Controls.Add(this.panel13);
-            this.tabAccDetail.Controls.Add(this.pictureBox1);
+            this.tabAccDetail.Controls.Add(this.ptrProfileAD);
             this.tabAccDetail.Controls.Add(this.grbADSearch);
             this.tabAccDetail.Controls.Add(this.label54);
             this.tabAccDetail.HorizontalScrollbarBarColor = true;
@@ -753,7 +760,7 @@ namespace BankingSystem
             this.panel13.Controls.Add(this.txtADGender);
             this.panel13.Controls.Add(this.txtADPhone);
             this.panel13.Controls.Add(this.txtADAdd);
-            this.panel13.Controls.Add(this.textBox5);
+            this.panel13.Controls.Add(this.txtADDOB);
             this.panel13.Controls.Add(this.txtADAccTitle);
             this.panel13.Controls.Add(this.txtADType);
             this.panel13.Controls.Add(this.txtADNum);
@@ -846,15 +853,15 @@ namespace BankingSystem
             this.txtADAdd.Size = new System.Drawing.Size(202, 20);
             this.txtADAdd.TabIndex = 43;
             // 
-            // textBox5
+            // txtADDOB
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtADDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(130, 164);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(202, 20);
-            this.textBox5.TabIndex = 42;
+            this.txtADDOB.Location = new System.Drawing.Point(130, 164);
+            this.txtADDOB.Name = "txtADDOB";
+            this.txtADDOB.Size = new System.Drawing.Size(202, 20);
+            this.txtADDOB.TabIndex = 42;
             // 
             // txtADAccTitle
             // 
@@ -1065,17 +1072,17 @@ namespace BankingSystem
             this.label63.Text = "Customer Name:";
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
+            // ptrProfileAD
             // 
-            this.pictureBox1.BackgroundImage = global::BankingSystem.Properties.Resources._127066563_1053964071708972_5273578564006566232_o;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.ptrProfileAD.BackgroundImage = global::BankingSystem.Properties.Resources._127066563_1053964071708972_5273578564006566232_o;
+            this.ptrProfileAD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptrProfileAD.InitialImage = ((System.Drawing.Image)(resources.GetObject("ptrProfileAD.InitialImage")));
+            this.ptrProfileAD.Location = new System.Drawing.Point(20, 73);
+            this.ptrProfileAD.Name = "ptrProfileAD";
+            this.ptrProfileAD.Size = new System.Drawing.Size(167, 165);
+            this.ptrProfileAD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptrProfileAD.TabIndex = 7;
+            this.ptrProfileAD.TabStop = false;
             // 
             // grbADSearch
             // 
@@ -1106,6 +1113,7 @@ namespace BankingSystem
             this.btnADSearch.TabIndex = 10;
             this.btnADSearch.Text = "Search";
             this.btnADSearch.UseSelectable = true;
+            this.btnADSearch.Click += new System.EventHandler(this.btnADSearch_Click);
             // 
             // txtADTitle
             // 
@@ -1689,12 +1697,13 @@ namespace BankingSystem
             this.btnPicture.TabIndex = 25;
             this.btnPicture.Text = "Change Image";
             this.btnPicture.UseSelectable = true;
+            this.btnPicture.Click += new System.EventHandler(this.btnPicture_Click);
             // 
             // profileptr
             // 
-            this.profileptr.BackgroundImage = global::BankingSystem.Properties.Resources._127066563_1053964071708972_5273578564006566232_o;
             this.profileptr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.profileptr.InitialImage = ((System.Drawing.Image)(resources.GetObject("profileptr.InitialImage")));
+            this.profileptr.Image = ((System.Drawing.Image)(resources.GetObject("profileptr.Image")));
+            this.profileptr.InitialImage = null;
             this.profileptr.Location = new System.Drawing.Point(3, 3);
             this.profileptr.Name = "profileptr";
             this.profileptr.Size = new System.Drawing.Size(197, 206);
@@ -1715,6 +1724,7 @@ namespace BankingSystem
             this.lbClear.TabStop = true;
             this.lbClear.Text = "Clear All Fields";
             this.lbClear.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.lbClear.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbClear_LinkClicked);
             // 
             // btnCreate
             // 
@@ -1725,6 +1735,7 @@ namespace BankingSystem
             this.btnCreate.TabIndex = 22;
             this.btnCreate.Text = "Create Account";
             this.btnCreate.UseSelectable = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // dtCreDate
             // 
@@ -1735,6 +1746,7 @@ namespace BankingSystem
             this.dtCreDate.Name = "dtCreDate";
             this.dtCreDate.Size = new System.Drawing.Size(308, 20);
             this.dtCreDate.TabIndex = 12;
+            this.dtCreDate.Value = new System.DateTime(2021, 5, 29, 0, 0, 0, 0);
             // 
             // rabtnOther
             // 
@@ -1774,7 +1786,13 @@ namespace BankingSystem
             this.cbCreAccType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbCreAccType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbCreAccType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbCreAccType.FormattingEnabled = true;
+            this.cbCreAccType.Items.AddRange(new object[] {
+            "Normal",
+            "V.I.P",
+            "Standard"});
             this.cbCreAccType.Location = new System.Drawing.Point(179, 112);
             this.cbCreAccType.Name = "cbCreAccType";
             this.cbCreAccType.Size = new System.Drawing.Size(308, 21);
@@ -1789,6 +1807,7 @@ namespace BankingSystem
             this.txtCreDeposit.Name = "txtCreDeposit";
             this.txtCreDeposit.Size = new System.Drawing.Size(308, 20);
             this.txtCreDeposit.TabIndex = 21;
+            this.txtCreDeposit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCreDeposit_KeyPress);
             // 
             // txtCreOccu
             // 
@@ -1829,6 +1848,7 @@ namespace BankingSystem
             this.txtCrePhone.Name = "txtCrePhone";
             this.txtCrePhone.Size = new System.Drawing.Size(308, 20);
             this.txtCrePhone.TabIndex = 14;
+            this.txtCrePhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCrePhone_KeyPress);
             // 
             // txtCreAdd
             // 
@@ -1859,6 +1879,7 @@ namespace BankingSystem
             this.txtAccNumCre.Name = "txtAccNumCre";
             this.txtAccNumCre.Size = new System.Drawing.Size(308, 20);
             this.txtAccNumCre.TabIndex = 9;
+            this.txtAccNumCre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAccNumCre_KeyPress);
             // 
             // txtCusNameCre
             // 
@@ -1869,6 +1890,7 @@ namespace BankingSystem
             this.txtCusNameCre.Name = "txtCusNameCre";
             this.txtCusNameCre.Size = new System.Drawing.Size(308, 20);
             this.txtCusNameCre.TabIndex = 8;
+            this.txtCusNameCre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCusNameCre_KeyPress);
             // 
             // label14
             // 
@@ -2879,6 +2901,7 @@ namespace BankingSystem
             this.btnCBSearch.TabIndex = 10;
             this.btnCBSearch.Text = "Search";
             this.btnCBSearch.UseSelectable = true;
+            this.btnCBSearch.Click += new System.EventHandler(this.btnCBSearch_Click);
             // 
             // txtCBSTitle
             // 
@@ -3025,6 +3048,7 @@ namespace BankingSystem
             this.Controls.Add(this.tabCreateAcc);
             this.Controls.Add(this.panel1);
             this.Name = "frmAddAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banking System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddAccount_FormClosing);
             this.Load += new System.EventHandler(this.frmAddAccount_Load);
@@ -3043,7 +3067,7 @@ namespace BankingSystem
             this.tabAccDetail.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrProfileAD)).EndInit();
             this.grbADSearch.ResumeLayout(false);
             this.grbADSearch.PerformLayout();
             this.tabTransaction.ResumeLayout(false);
@@ -3247,7 +3271,7 @@ namespace BankingSystem
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.DataGridView dtgrvCusList;
         private MetroFramework.Controls.MetroTabPage tabAccDetail;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptrProfileAD;
         private System.Windows.Forms.GroupBox grbADSearch;
         private MetroFramework.Controls.MetroButton btnADSearch;
         private System.Windows.Forms.TextBox txtADTitle;
@@ -3323,7 +3347,7 @@ namespace BankingSystem
         private System.Windows.Forms.TextBox txtADGender;
         private System.Windows.Forms.TextBox txtADPhone;
         private System.Windows.Forms.TextBox txtADAdd;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtADDOB;
         private System.Windows.Forms.TextBox txtADAccTitle;
         private System.Windows.Forms.TextBox txtADType;
         private System.Windows.Forms.TextBox txtADNum;

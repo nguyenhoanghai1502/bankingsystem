@@ -60,6 +60,7 @@ namespace BankingSystem
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(235, 20);
             this.txtpassword.TabIndex = 2;
+            this.txtpassword.Text = "1";
             // 
             // txtusername
             // 
@@ -67,6 +68,7 @@ namespace BankingSystem
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(235, 20);
             this.txtusername.TabIndex = 1;
+            this.txtusername.Text = "h1";
             // 
             // label2
             // 
@@ -101,6 +103,8 @@ namespace BankingSystem
             // checkboxadmin
             // 
             this.checkboxadmin.AutoSize = true;
+            this.checkboxadmin.Checked = true;
+            this.checkboxadmin.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkboxadmin.Location = new System.Drawing.Point(20, 15);
             this.checkboxadmin.Name = "checkboxadmin";
             this.checkboxadmin.Size = new System.Drawing.Size(55, 17);
