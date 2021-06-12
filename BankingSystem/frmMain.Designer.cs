@@ -66,31 +66,6 @@ namespace BankingSystem
             this.txtUASearchNum = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.tabAccDetail = new MetroFramework.Controls.MetroTabPage();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.txtADBalance = new System.Windows.Forms.TextBox();
-            this.txtADOccu = new System.Windows.Forms.TextBox();
-            this.txtADComName = new System.Windows.Forms.TextBox();
-            this.txtADEmail = new System.Windows.Forms.TextBox();
-            this.txtADGender = new System.Windows.Forms.TextBox();
-            this.txtADPhone = new System.Windows.Forms.TextBox();
-            this.txtADAdd = new System.Windows.Forms.TextBox();
-            this.txtADDOB = new System.Windows.Forms.TextBox();
-            this.txtADAccTitle = new System.Windows.Forms.TextBox();
-            this.txtADType = new System.Windows.Forms.TextBox();
-            this.txtADNum = new System.Windows.Forms.TextBox();
-            this.txtADName = new System.Windows.Forms.TextBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
             this.ptrProfileAD = new System.Windows.Forms.PictureBox();
             this.grbADSearch = new System.Windows.Forms.GroupBox();
             this.btnADSearch = new MetroFramework.Controls.MetroButton();
@@ -101,6 +76,31 @@ namespace BankingSystem
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtADName = new System.Windows.Forms.TextBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.txtADAdd = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtADDOB = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.txtADAccTitle = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.txtADType = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.txtADNum = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.txtADPhone = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.txtADGender = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.txtADBalance = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.txtADOccu = new System.Windows.Forms.TextBox();
+            this.txtADEmail = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.txtADComName = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
             this.tabTransaction = new MetroFramework.Controls.MetroTabPage();
             this.dtgrvTransaction = new System.Windows.Forms.DataGridView();
             this.accName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,10 +117,6 @@ namespace BankingSystem
             this.txtTransNum = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.tabSearch = new MetroFramework.Controls.MetroTabPage();
-            this.grbSearchAcc = new System.Windows.Forms.GroupBox();
-            this.btnSearchAcc = new MetroFramework.Controls.MetroButton();
-            this.txtSAccNumber = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
             this.dtgrvSearchAcc = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,6 +130,11 @@ namespace BankingSystem
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grbSearchAcc = new System.Windows.Forms.GroupBox();
+            this.btnSearchAcc = new MetroFramework.Controls.MetroButton();
+            this.txtSAccNumber = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.tabCuslist = new MetroFramework.Controls.MetroTabPage();
             this.dtgrvCusList = new System.Windows.Forms.DataGridView();
@@ -149,6 +150,7 @@ namespace BankingSystem
             this.company = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.occupation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.tabCreate = new MetroFramework.Controls.MetroTabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -187,8 +189,10 @@ namespace BankingSystem
             this.label1 = new System.Windows.Forms.Label();
             this.tabDeposit = new MetroFramework.Controls.MetroTabPage();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnConfirmDe = new MetroFramework.Controls.MetroButton();
             this.txtDeAmount = new System.Windows.Forms.TextBox();
+            this.txtDEAccNumCon = new System.Windows.Forms.TextBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.btnConfirmDe = new MetroFramework.Controls.MetroButton();
             this.label23 = new System.Windows.Forms.Label();
             this.txtDeBalace = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -227,7 +231,6 @@ namespace BankingSystem
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btnOkTrans = new MetroFramework.Controls.MetroButton();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -274,6 +277,11 @@ namespace BankingSystem
             this.btnCurrency = new MetroFramework.Controls.MetroButton();
             this.btnNotepad = new MetroFramework.Controls.MetroButton();
             this.btnCalculator = new MetroFramework.Controls.MetroButton();
+            this.txtWithNum = new System.Windows.Forms.TextBox();
+            this.label80 = new System.Windows.Forms.Label();
+            this.txtTranAmount = new System.Windows.Forms.TextBox();
+            this.label81 = new System.Windows.Forms.Label();
+            this.btnTransConfirm = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.Watch.SuspendLayout();
             this.tabCreateAcc.SuspendLayout();
@@ -282,15 +290,18 @@ namespace BankingSystem
             ((System.ComponentModel.ISupportInitialize)(this.profilePictr)).BeginInit();
             this.grbUASearch.SuspendLayout();
             this.tabAccDetail.SuspendLayout();
-            this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrProfileAD)).BeginInit();
             this.grbADSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.tabTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvTransaction)).BeginInit();
             this.grbTranSearch.SuspendLayout();
             this.tabSearch.SuspendLayout();
-            this.grbSearchAcc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvSearchAcc)).BeginInit();
+            this.grbSearchAcc.SuspendLayout();
             this.tabCuslist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvCusList)).BeginInit();
             this.tabCreate.SuspendLayout();
@@ -409,7 +420,7 @@ namespace BankingSystem
             this.tabCreateAcc.Margin = new System.Windows.Forms.Padding(0);
             this.tabCreateAcc.Multiline = true;
             this.tabCreateAcc.Name = "tabCreateAcc";
-            this.tabCreateAcc.SelectedIndex = 0;
+            this.tabCreateAcc.SelectedIndex = 5;
             this.tabCreateAcc.Size = new System.Drawing.Size(733, 604);
             this.tabCreateAcc.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabCreateAcc.Style = MetroFramework.MetroColorStyle.Lime;
@@ -731,10 +742,10 @@ namespace BankingSystem
             // 
             // tabAccDetail
             // 
-            this.tabAccDetail.Controls.Add(this.panel13);
             this.tabAccDetail.Controls.Add(this.ptrProfileAD);
             this.tabAccDetail.Controls.Add(this.grbADSearch);
             this.tabAccDetail.Controls.Add(this.label54);
+            this.tabAccDetail.Controls.Add(this.splitContainer1);
             this.tabAccDetail.HorizontalScrollbarBarColor = true;
             this.tabAccDetail.HorizontalScrollbarHighlightOnWheel = false;
             this.tabAccDetail.HorizontalScrollbarSize = 10;
@@ -746,331 +757,7 @@ namespace BankingSystem
             this.tabAccDetail.VerticalScrollbarBarColor = true;
             this.tabAccDetail.VerticalScrollbarHighlightOnWheel = false;
             this.tabAccDetail.VerticalScrollbarSize = 10;
-            // 
-            // panel13
-            // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Controls.Add(this.txtADBalance);
-            this.panel13.Controls.Add(this.txtADOccu);
-            this.panel13.Controls.Add(this.txtADComName);
-            this.panel13.Controls.Add(this.txtADEmail);
-            this.panel13.Controls.Add(this.txtADGender);
-            this.panel13.Controls.Add(this.txtADPhone);
-            this.panel13.Controls.Add(this.txtADAdd);
-            this.panel13.Controls.Add(this.txtADDOB);
-            this.panel13.Controls.Add(this.txtADAccTitle);
-            this.panel13.Controls.Add(this.txtADType);
-            this.panel13.Controls.Add(this.txtADNum);
-            this.panel13.Controls.Add(this.txtADName);
-            this.panel13.Controls.Add(this.label64);
-            this.panel13.Controls.Add(this.label61);
-            this.panel13.Controls.Add(this.label65);
-            this.panel13.Controls.Add(this.label62);
-            this.panel13.Controls.Add(this.label66);
-            this.panel13.Controls.Add(this.label59);
-            this.panel13.Controls.Add(this.label67);
-            this.panel13.Controls.Add(this.label60);
-            this.panel13.Controls.Add(this.label68);
-            this.panel13.Controls.Add(this.label58);
-            this.panel13.Controls.Add(this.label69);
-            this.panel13.Controls.Add(this.label63);
-            this.panel13.Enabled = false;
-            this.panel13.Location = new System.Drawing.Point(20, 245);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(684, 231);
-            this.panel13.TabIndex = 8;
-            // 
-            // txtADBalance
-            // 
-            this.txtADBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADBalance.Location = new System.Drawing.Point(481, 204);
-            this.txtADBalance.Name = "txtADBalance";
-            this.txtADBalance.Size = new System.Drawing.Size(202, 20);
-            this.txtADBalance.TabIndex = 50;
-            // 
-            // txtADOccu
-            // 
-            this.txtADOccu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADOccu.Location = new System.Drawing.Point(480, 164);
-            this.txtADOccu.Name = "txtADOccu";
-            this.txtADOccu.Size = new System.Drawing.Size(202, 20);
-            this.txtADOccu.TabIndex = 48;
-            // 
-            // txtADComName
-            // 
-            this.txtADComName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADComName.Location = new System.Drawing.Point(480, 124);
-            this.txtADComName.Name = "txtADComName";
-            this.txtADComName.Size = new System.Drawing.Size(202, 20);
-            this.txtADComName.TabIndex = 47;
-            // 
-            // txtADEmail
-            // 
-            this.txtADEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADEmail.Location = new System.Drawing.Point(479, 84);
-            this.txtADEmail.Name = "txtADEmail";
-            this.txtADEmail.Size = new System.Drawing.Size(202, 20);
-            this.txtADEmail.TabIndex = 46;
-            // 
-            // txtADGender
-            // 
-            this.txtADGender.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADGender.Location = new System.Drawing.Point(480, 47);
-            this.txtADGender.Name = "txtADGender";
-            this.txtADGender.Size = new System.Drawing.Size(202, 20);
-            this.txtADGender.TabIndex = 45;
-            // 
-            // txtADPhone
-            // 
-            this.txtADPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADPhone.Location = new System.Drawing.Point(480, 7);
-            this.txtADPhone.Name = "txtADPhone";
-            this.txtADPhone.Size = new System.Drawing.Size(202, 20);
-            this.txtADPhone.TabIndex = 44;
-            // 
-            // txtADAdd
-            // 
-            this.txtADAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADAdd.Location = new System.Drawing.Point(130, 204);
-            this.txtADAdd.Name = "txtADAdd";
-            this.txtADAdd.Size = new System.Drawing.Size(202, 20);
-            this.txtADAdd.TabIndex = 43;
-            // 
-            // txtADDOB
-            // 
-            this.txtADDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADDOB.Location = new System.Drawing.Point(130, 164);
-            this.txtADDOB.Name = "txtADDOB";
-            this.txtADDOB.Size = new System.Drawing.Size(202, 20);
-            this.txtADDOB.TabIndex = 42;
-            // 
-            // txtADAccTitle
-            // 
-            this.txtADAccTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADAccTitle.Location = new System.Drawing.Point(130, 122);
-            this.txtADAccTitle.Name = "txtADAccTitle";
-            this.txtADAccTitle.Size = new System.Drawing.Size(202, 20);
-            this.txtADAccTitle.TabIndex = 41;
-            // 
-            // txtADType
-            // 
-            this.txtADType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADType.Location = new System.Drawing.Point(130, 84);
-            this.txtADType.Name = "txtADType";
-            this.txtADType.Size = new System.Drawing.Size(202, 20);
-            this.txtADType.TabIndex = 40;
-            // 
-            // txtADNum
-            // 
-            this.txtADNum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADNum.Location = new System.Drawing.Point(130, 44);
-            this.txtADNum.Name = "txtADNum";
-            this.txtADNum.Size = new System.Drawing.Size(202, 20);
-            this.txtADNum.TabIndex = 49;
-            // 
-            // txtADName
-            // 
-            this.txtADName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtADName.Location = new System.Drawing.Point(130, 7);
-            this.txtADName.Name = "txtADName";
-            this.txtADName.Size = new System.Drawing.Size(202, 20);
-            this.txtADName.TabIndex = 39;
-            // 
-            // label64
-            // 
-            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label64.AutoSize = true;
-            this.label64.BackColor = System.Drawing.Color.White;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(360, 208);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(122, 16);
-            this.label64.TabIndex = 27;
-            this.label64.Text = "Current Balance:";
-            // 
-            // label61
-            // 
-            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label61.AutoSize = true;
-            this.label61.BackColor = System.Drawing.Color.White;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(2, 88);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(107, 16);
-            this.label61.TabIndex = 33;
-            this.label61.Text = "Account Type:";
-            // 
-            // label65
-            // 
-            this.label65.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label65.AutoSize = true;
-            this.label65.BackColor = System.Drawing.Color.White;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(360, 168);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(94, 16);
-            this.label65.TabIndex = 29;
-            this.label65.Text = "Occupation: ";
-            // 
-            // label62
-            // 
-            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label62.AutoSize = true;
-            this.label62.BackColor = System.Drawing.Color.White;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(2, 48);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(125, 16);
-            this.label62.TabIndex = 35;
-            this.label62.Text = "Account Number:";
-            // 
-            // label66
-            // 
-            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label66.AutoSize = true;
-            this.label66.BackColor = System.Drawing.Color.White;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(360, 128);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(122, 16);
-            this.label66.TabIndex = 31;
-            this.label66.Text = "Company Name:";
-            // 
-            // label59
-            // 
-            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label59.AutoSize = true;
-            this.label59.BackColor = System.Drawing.Color.White;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(2, 168);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(99, 16);
-            this.label59.TabIndex = 30;
-            this.label59.Text = "Date Of Birth:";
-            // 
-            // label67
-            // 
-            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label67.AutoSize = true;
-            this.label67.BackColor = System.Drawing.Color.White;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(360, 88);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(113, 16);
-            this.label67.TabIndex = 34;
-            this.label67.Text = "Email Address:";
-            // 
-            // label60
-            // 
-            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label60.AutoSize = true;
-            this.label60.BackColor = System.Drawing.Color.White;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(2, 128);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(102, 16);
-            this.label60.TabIndex = 32;
-            this.label60.Text = "Account Title:";
-            // 
-            // label68
-            // 
-            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label68.AutoSize = true;
-            this.label68.BackColor = System.Drawing.Color.White;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(360, 48);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(63, 16);
-            this.label68.TabIndex = 36;
-            this.label68.Text = "Gender:";
-            // 
-            // label58
-            // 
-            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label58.AutoSize = true;
-            this.label58.BackColor = System.Drawing.Color.White;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(2, 208);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(70, 16);
-            this.label58.TabIndex = 28;
-            this.label58.Text = "Address:";
-            // 
-            // label69
-            // 
-            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label69.AutoSize = true;
-            this.label69.BackColor = System.Drawing.Color.White;
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(360, 8);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(114, 16);
-            this.label69.TabIndex = 37;
-            this.label69.Text = "Phone Number:";
-            // 
-            // label63
-            // 
-            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label63.AutoSize = true;
-            this.label63.BackColor = System.Drawing.Color.White;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(2, 8);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(122, 16);
-            this.label63.TabIndex = 38;
-            this.label63.Text = "Customer Name:";
-            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tabAccDetail.Leave += new System.EventHandler(this.tabAccDetail_Leave);
             // 
             // ptrProfileAD
             // 
@@ -1144,6 +831,7 @@ namespace BankingSystem
             this.txtADSearhName.Name = "txtADSearhName";
             this.txtADSearhName.Size = new System.Drawing.Size(342, 26);
             this.txtADSearhName.TabIndex = 7;
+            this.txtADSearhName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtADSearhName_KeyPress);
             // 
             // label55
             // 
@@ -1186,6 +874,341 @@ namespace BankingSystem
             this.label54.TabIndex = 2;
             this.label54.Text = "Account Details:";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Location = new System.Drawing.Point(20, 246);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.Controls.Add(this.txtADName);
+            this.splitContainer1.Panel1.Controls.Add(this.label63);
+            this.splitContainer1.Panel1.Controls.Add(this.txtADAdd);
+            this.splitContainer1.Panel1.Controls.Add(this.label58);
+            this.splitContainer1.Panel1.Controls.Add(this.txtADDOB);
+            this.splitContainer1.Panel1.Controls.Add(this.label60);
+            this.splitContainer1.Panel1.Controls.Add(this.txtADAccTitle);
+            this.splitContainer1.Panel1.Controls.Add(this.label59);
+            this.splitContainer1.Panel1.Controls.Add(this.txtADType);
+            this.splitContainer1.Panel1.Controls.Add(this.label62);
+            this.splitContainer1.Panel1.Controls.Add(this.txtADNum);
+            this.splitContainer1.Panel1.Controls.Add(this.label61);
+            this.splitContainer1.Panel1.Enabled = false;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel2.Controls.Add(this.txtADPhone);
+            this.splitContainer1.Panel2.Controls.Add(this.label69);
+            this.splitContainer1.Panel2.Controls.Add(this.txtADGender);
+            this.splitContainer1.Panel2.Controls.Add(this.label68);
+            this.splitContainer1.Panel2.Controls.Add(this.txtADBalance);
+            this.splitContainer1.Panel2.Controls.Add(this.label64);
+            this.splitContainer1.Panel2.Controls.Add(this.label67);
+            this.splitContainer1.Panel2.Controls.Add(this.txtADOccu);
+            this.splitContainer1.Panel2.Controls.Add(this.txtADEmail);
+            this.splitContainer1.Panel2.Controls.Add(this.label65);
+            this.splitContainer1.Panel2.Controls.Add(this.txtADComName);
+            this.splitContainer1.Panel2.Controls.Add(this.label66);
+            this.splitContainer1.Panel2.Enabled = false;
+            this.splitContainer1.Size = new System.Drawing.Size(684, 292);
+            this.splitContainer1.SplitterDistance = 344;
+            this.splitContainer1.TabIndex = 51;
+            // 
+            // txtADName
+            // 
+            this.txtADName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADName.Location = new System.Drawing.Point(139, 7);
+            this.txtADName.Name = "txtADName";
+            this.txtADName.Size = new System.Drawing.Size(202, 20);
+            this.txtADName.TabIndex = 39;
+            // 
+            // label63
+            // 
+            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label63.AutoSize = true;
+            this.label63.BackColor = System.Drawing.Color.White;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(11, 8);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(122, 16);
+            this.label63.TabIndex = 38;
+            this.label63.Text = "Customer Name:";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtADAdd
+            // 
+            this.txtADAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADAdd.Location = new System.Drawing.Point(139, 204);
+            this.txtADAdd.Name = "txtADAdd";
+            this.txtADAdd.Size = new System.Drawing.Size(202, 20);
+            this.txtADAdd.TabIndex = 43;
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label58.AutoSize = true;
+            this.label58.BackColor = System.Drawing.Color.White;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(11, 208);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(70, 16);
+            this.label58.TabIndex = 28;
+            this.label58.Text = "Address:";
+            // 
+            // txtADDOB
+            // 
+            this.txtADDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADDOB.Location = new System.Drawing.Point(139, 164);
+            this.txtADDOB.Name = "txtADDOB";
+            this.txtADDOB.Size = new System.Drawing.Size(202, 20);
+            this.txtADDOB.TabIndex = 42;
+            // 
+            // label60
+            // 
+            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label60.AutoSize = true;
+            this.label60.BackColor = System.Drawing.Color.White;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(11, 128);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(102, 16);
+            this.label60.TabIndex = 32;
+            this.label60.Text = "Account Title:";
+            // 
+            // txtADAccTitle
+            // 
+            this.txtADAccTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADAccTitle.Location = new System.Drawing.Point(139, 122);
+            this.txtADAccTitle.Name = "txtADAccTitle";
+            this.txtADAccTitle.Size = new System.Drawing.Size(202, 20);
+            this.txtADAccTitle.TabIndex = 41;
+            // 
+            // label59
+            // 
+            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.White;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(11, 168);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(99, 16);
+            this.label59.TabIndex = 30;
+            this.label59.Text = "Date Of Birth:";
+            // 
+            // txtADType
+            // 
+            this.txtADType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADType.Location = new System.Drawing.Point(139, 84);
+            this.txtADType.Name = "txtADType";
+            this.txtADType.Size = new System.Drawing.Size(202, 20);
+            this.txtADType.TabIndex = 40;
+            // 
+            // label62
+            // 
+            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label62.AutoSize = true;
+            this.label62.BackColor = System.Drawing.Color.White;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(11, 48);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(125, 16);
+            this.label62.TabIndex = 35;
+            this.label62.Text = "Account Number:";
+            // 
+            // txtADNum
+            // 
+            this.txtADNum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADNum.Location = new System.Drawing.Point(139, 44);
+            this.txtADNum.Name = "txtADNum";
+            this.txtADNum.Size = new System.Drawing.Size(202, 20);
+            this.txtADNum.TabIndex = 49;
+            // 
+            // label61
+            // 
+            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label61.AutoSize = true;
+            this.label61.BackColor = System.Drawing.Color.White;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(11, 88);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(107, 16);
+            this.label61.TabIndex = 33;
+            this.label61.Text = "Account Type:";
+            // 
+            // txtADPhone
+            // 
+            this.txtADPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADPhone.Location = new System.Drawing.Point(128, 10);
+            this.txtADPhone.Name = "txtADPhone";
+            this.txtADPhone.Size = new System.Drawing.Size(202, 20);
+            this.txtADPhone.TabIndex = 44;
+            // 
+            // label69
+            // 
+            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label69.AutoSize = true;
+            this.label69.BackColor = System.Drawing.Color.White;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(8, 11);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(114, 16);
+            this.label69.TabIndex = 37;
+            this.label69.Text = "Phone Number:";
+            // 
+            // txtADGender
+            // 
+            this.txtADGender.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADGender.Location = new System.Drawing.Point(128, 50);
+            this.txtADGender.Name = "txtADGender";
+            this.txtADGender.Size = new System.Drawing.Size(202, 20);
+            this.txtADGender.TabIndex = 45;
+            // 
+            // label68
+            // 
+            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label68.AutoSize = true;
+            this.label68.BackColor = System.Drawing.Color.White;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(8, 51);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(63, 16);
+            this.label68.TabIndex = 36;
+            this.label68.Text = "Gender:";
+            // 
+            // txtADBalance
+            // 
+            this.txtADBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADBalance.Location = new System.Drawing.Point(129, 207);
+            this.txtADBalance.Name = "txtADBalance";
+            this.txtADBalance.Size = new System.Drawing.Size(202, 20);
+            this.txtADBalance.TabIndex = 50;
+            // 
+            // label64
+            // 
+            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label64.AutoSize = true;
+            this.label64.BackColor = System.Drawing.Color.White;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(8, 211);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(122, 16);
+            this.label64.TabIndex = 27;
+            this.label64.Text = "Current Balance:";
+            // 
+            // label67
+            // 
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label67.AutoSize = true;
+            this.label67.BackColor = System.Drawing.Color.White;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Location = new System.Drawing.Point(8, 91);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(113, 16);
+            this.label67.TabIndex = 34;
+            this.label67.Text = "Email Address:";
+            // 
+            // txtADOccu
+            // 
+            this.txtADOccu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADOccu.Location = new System.Drawing.Point(128, 167);
+            this.txtADOccu.Name = "txtADOccu";
+            this.txtADOccu.Size = new System.Drawing.Size(202, 20);
+            this.txtADOccu.TabIndex = 48;
+            // 
+            // txtADEmail
+            // 
+            this.txtADEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADEmail.Location = new System.Drawing.Point(127, 87);
+            this.txtADEmail.Name = "txtADEmail";
+            this.txtADEmail.Size = new System.Drawing.Size(202, 20);
+            this.txtADEmail.TabIndex = 46;
+            // 
+            // label65
+            // 
+            this.label65.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label65.AutoSize = true;
+            this.label65.BackColor = System.Drawing.Color.White;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(8, 171);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(94, 16);
+            this.label65.TabIndex = 29;
+            this.label65.Text = "Occupation: ";
+            // 
+            // txtADComName
+            // 
+            this.txtADComName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtADComName.Location = new System.Drawing.Point(128, 127);
+            this.txtADComName.Name = "txtADComName";
+            this.txtADComName.Size = new System.Drawing.Size(202, 20);
+            this.txtADComName.TabIndex = 47;
+            // 
+            // label66
+            // 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label66.AutoSize = true;
+            this.label66.BackColor = System.Drawing.Color.White;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(8, 131);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(122, 16);
+            this.label66.TabIndex = 31;
+            this.label66.Text = "Company Name:";
+            // 
             // tabTransaction
             // 
             this.tabTransaction.Controls.Add(this.dtgrvTransaction);
@@ -1220,7 +1243,7 @@ namespace BankingSystem
             this.to});
             this.dtgrvTransaction.Location = new System.Drawing.Point(33, 178);
             this.dtgrvTransaction.Name = "dtgrvTransaction";
-            this.dtgrvTransaction.Size = new System.Drawing.Size(658, 284);
+            this.dtgrvTransaction.Size = new System.Drawing.Size(658, 337);
             this.dtgrvTransaction.TabIndex = 9;
             // 
             // accName
@@ -1330,8 +1353,8 @@ namespace BankingSystem
             // tabSearch
             // 
             this.tabSearch.BackColor = System.Drawing.Color.Silver;
-            this.tabSearch.Controls.Add(this.grbSearchAcc);
             this.tabSearch.Controls.Add(this.dtgrvSearchAcc);
+            this.tabSearch.Controls.Add(this.grbSearchAcc);
             this.tabSearch.Controls.Add(this.label42);
             this.tabSearch.HorizontalScrollbarBarColor = true;
             this.tabSearch.HorizontalScrollbarHighlightOnWheel = false;
@@ -1344,6 +1367,137 @@ namespace BankingSystem
             this.tabSearch.VerticalScrollbarBarColor = true;
             this.tabSearch.VerticalScrollbarHighlightOnWheel = false;
             this.tabSearch.VerticalScrollbarSize = 10;
+            this.tabSearch.Leave += new System.EventHandler(this.tabSearch_Leave);
+            // 
+            // dtgrvSearchAcc
+            // 
+            this.dtgrvSearchAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgrvSearchAcc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgrvSearchAcc.ColumnHeadersHeight = 50;
+            this.dtgrvSearchAcc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.dtgrvSearchAcc.Location = new System.Drawing.Point(23, 182);
+            this.dtgrvSearchAcc.Name = "dtgrvSearchAcc";
+            this.dtgrvSearchAcc.Size = new System.Drawing.Size(681, 356);
+            this.dtgrvSearchAcc.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Customer Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Account Number";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 103;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "acctitle";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Account Title";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 87;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "acctype";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Account Type";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 91;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "gender";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Gender";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 67;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "dob";
+            this.dataGridViewTextBoxColumn6.HeaderText = "DOB";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "address";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "phone";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Phone Number";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "company";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Company";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 76;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "occupation";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Occupation";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 87;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "initialdeposit";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Account Balance";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 105;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "pic";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Pic";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            this.dataGridViewTextBoxColumn13.Width = 47;
             // 
             // grbSearchAcc
             // 
@@ -1370,6 +1524,7 @@ namespace BankingSystem
             this.btnSearchAcc.TabIndex = 8;
             this.btnSearchAcc.Text = "Search";
             this.btnSearchAcc.UseSelectable = true;
+            this.btnSearchAcc.Click += new System.EventHandler(this.btnSearchAcc_Click);
             // 
             // txtSAccNumber
             // 
@@ -1389,102 +1544,6 @@ namespace BankingSystem
             this.label78.Size = new System.Drawing.Size(152, 20);
             this.label78.TabIndex = 0;
             this.label78.Text = "Account Number: ";
-            // 
-            // dtgrvSearchAcc
-            // 
-            this.dtgrvSearchAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgrvSearchAcc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgrvSearchAcc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
-            this.dtgrvSearchAcc.Location = new System.Drawing.Point(23, 181);
-            this.dtgrvSearchAcc.Name = "dtgrvSearchAcc";
-            this.dtgrvSearchAcc.Size = new System.Drawing.Size(681, 290);
-            this.dtgrvSearchAcc.TabIndex = 9;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Customer Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Account Number";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Account Title";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Account Type";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Gender";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "DOB";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Phone Number";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Company";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn11.HeaderText = "Occupation";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn12.HeaderText = "Account Balance";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
             // label42
             // 
@@ -1518,7 +1577,8 @@ namespace BankingSystem
             this.dtgrvCusList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgrvCusList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvCusList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgrvCusList.ColumnHeadersHeight = 50;
             this.dtgrvCusList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cusName,
             this.accNum,
@@ -1531,83 +1591,116 @@ namespace BankingSystem
             this.email,
             this.company,
             this.occupation,
-            this.balance});
+            this.balance,
+            this.Pic});
             this.dtgrvCusList.Location = new System.Drawing.Point(22, 64);
             this.dtgrvCusList.Name = "dtgrvCusList";
-            this.dtgrvCusList.Size = new System.Drawing.Size(681, 403);
+            this.dtgrvCusList.Size = new System.Drawing.Size(681, 421);
             this.dtgrvCusList.TabIndex = 4;
             // 
             // cusName
             // 
-            this.cusName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cusName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cusName.DataPropertyName = "name";
             this.cusName.HeaderText = "Customer Name";
             this.cusName.Name = "cusName";
+            this.cusName.Width = 98;
             // 
             // accNum
             // 
-            this.accNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.accNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.accNum.DataPropertyName = "id";
             this.accNum.HeaderText = "Account Number";
             this.accNum.Name = "accNum";
+            this.accNum.Width = 103;
             // 
             // accTitle
             // 
-            this.accTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.accTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.accTitle.DataPropertyName = "acctitle";
             this.accTitle.HeaderText = "Account Title";
             this.accTitle.Name = "accTitle";
+            this.accTitle.Width = 87;
             // 
             // accType
             // 
-            this.accType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.accType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.accType.DataPropertyName = "acctype";
             this.accType.HeaderText = "Account Type";
             this.accType.Name = "accType";
+            this.accType.Width = 91;
             // 
             // gender
             // 
-            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.gender.DataPropertyName = "gender";
             this.gender.HeaderText = "Gender";
             this.gender.Name = "gender";
+            this.gender.Width = 67;
             // 
             // dob
             // 
-            this.dob.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dob.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dob.DataPropertyName = "dob";
             this.dob.HeaderText = "DOB";
             this.dob.Name = "dob";
+            this.dob.Width = 55;
             // 
             // address
             // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.address.DataPropertyName = "address";
             this.address.HeaderText = "Address";
             this.address.Name = "address";
+            this.address.Width = 70;
             // 
             // phone
             // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.phone.DataPropertyName = "phone";
             this.phone.HeaderText = "Phone Number";
             this.phone.Name = "phone";
+            this.phone.Width = 95;
             // 
             // email
             // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.email.DataPropertyName = "email";
             this.email.HeaderText = "Email";
             this.email.Name = "email";
+            this.email.Width = 57;
             // 
             // company
             // 
-            this.company.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.company.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.company.DataPropertyName = "company";
             this.company.HeaderText = "Company";
             this.company.Name = "company";
+            this.company.Width = 76;
             // 
             // occupation
             // 
-            this.occupation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.occupation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.occupation.DataPropertyName = "occupation";
             this.occupation.HeaderText = "Occupation";
             this.occupation.Name = "occupation";
+            this.occupation.Width = 87;
             // 
             // balance
             // 
-            this.balance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.balance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.balance.DataPropertyName = "initialdeposit";
             this.balance.HeaderText = "Account Balance";
             this.balance.Name = "balance";
+            this.balance.Width = 105;
+            // 
+            // Pic
+            // 
+            this.Pic.DataPropertyName = "pic";
+            this.Pic.HeaderText = "Pic";
+            this.Pic.Name = "Pic";
+            this.Pic.Visible = false;
+            this.Pic.Width = 47;
             // 
             // label15
             // 
@@ -1632,7 +1725,7 @@ namespace BankingSystem
             this.tabCreate.Name = "tabCreate";
             this.tabCreate.Size = new System.Drawing.Size(725, 493);
             this.tabCreate.TabIndex = 5;
-            this.tabCreate.Text = "Create Account";
+            this.tabCreate.Text = " Create Account";
             this.tabCreate.VerticalScrollbarBarColor = true;
             this.tabCreate.VerticalScrollbarHighlightOnWheel = false;
             this.tabCreate.VerticalScrollbarSize = 10;
@@ -2049,14 +2142,17 @@ namespace BankingSystem
             this.tabDeposit.VerticalScrollbarBarColor = true;
             this.tabDeposit.VerticalScrollbarHighlightOnWheel = false;
             this.tabDeposit.VerticalScrollbarSize = 10;
+            this.tabDeposit.Leave += new System.EventHandler(this.tabDeposit_Leave);
             // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Controls.Add(this.btnConfirmDe);
             this.panel7.Controls.Add(this.txtDeAmount);
+            this.panel7.Controls.Add(this.txtDEAccNumCon);
+            this.panel7.Controls.Add(this.label79);
+            this.panel7.Controls.Add(this.btnConfirmDe);
             this.panel7.Controls.Add(this.label23);
             this.panel7.Controls.Add(this.txtDeBalace);
             this.panel7.Controls.Add(this.label22);
@@ -2069,31 +2165,52 @@ namespace BankingSystem
             this.panel7.Size = new System.Drawing.Size(675, 228);
             this.panel7.TabIndex = 4;
             // 
-            // btnConfirmDe
-            // 
-            this.btnConfirmDe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirmDe.Location = new System.Drawing.Point(556, 164);
-            this.btnConfirmDe.Name = "btnConfirmDe";
-            this.btnConfirmDe.Size = new System.Drawing.Size(86, 33);
-            this.btnConfirmDe.TabIndex = 15;
-            this.btnConfirmDe.Text = "Confirm";
-            this.btnConfirmDe.UseSelectable = true;
-            // 
             // txtDeAmount
             // 
             this.txtDeAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDeAmount.Location = new System.Drawing.Point(166, 128);
+            this.txtDeAmount.Location = new System.Drawing.Point(166, 162);
             this.txtDeAmount.Name = "txtDeAmount";
-            this.txtDeAmount.Size = new System.Drawing.Size(477, 20);
-            this.txtDeAmount.TabIndex = 14;
+            this.txtDeAmount.Size = new System.Drawing.Size(476, 20);
+            this.txtDeAmount.TabIndex = 18;
+            // 
+            // txtDEAccNumCon
+            // 
+            this.txtDEAccNumCon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDEAccNumCon.Location = new System.Drawing.Point(165, 92);
+            this.txtDEAccNumCon.Name = "txtDEAccNumCon";
+            this.txtDEAccNumCon.Size = new System.Drawing.Size(477, 20);
+            this.txtDEAccNumCon.TabIndex = 17;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(14, 92);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(147, 20);
+            this.label79.TabIndex = 16;
+            this.label79.Text = "Account Number:";
+            // 
+            // btnConfirmDe
+            // 
+            this.btnConfirmDe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmDe.Location = new System.Drawing.Point(557, 192);
+            this.btnConfirmDe.Name = "btnConfirmDe";
+            this.btnConfirmDe.Size = new System.Drawing.Size(86, 33);
+            this.btnConfirmDe.TabIndex = 15;
+            this.btnConfirmDe.Text = "Confirm";
+            this.btnConfirmDe.UseSelectable = true;
+            this.btnConfirmDe.Click += new System.EventHandler(this.btnConfirmDe_Click);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(15, 131);
+            this.label23.Location = new System.Drawing.Point(15, 163);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(143, 20);
             this.label23.TabIndex = 0;
@@ -2104,7 +2221,7 @@ namespace BankingSystem
             this.txtDeBalace.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDeBalace.Location = new System.Drawing.Point(166, 94);
+            this.txtDeBalace.Location = new System.Drawing.Point(165, 128);
             this.txtDeBalace.Name = "txtDeBalace";
             this.txtDeBalace.Size = new System.Drawing.Size(477, 20);
             this.txtDeBalace.TabIndex = 13;
@@ -2113,7 +2230,7 @@ namespace BankingSystem
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(15, 97);
+            this.label22.Location = new System.Drawing.Point(15, 126);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(150, 20);
             this.label22.TabIndex = 0;
@@ -2124,7 +2241,7 @@ namespace BankingSystem
             this.txtDeTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDeTitle.Location = new System.Drawing.Point(166, 60);
+            this.txtDeTitle.Location = new System.Drawing.Point(166, 57);
             this.txtDeTitle.Name = "txtDeTitle";
             this.txtDeTitle.Size = new System.Drawing.Size(477, 20);
             this.txtDeTitle.TabIndex = 12;
@@ -2133,7 +2250,7 @@ namespace BankingSystem
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(15, 63);
+            this.label21.Location = new System.Drawing.Point(15, 60);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(119, 20);
             this.label21.TabIndex = 0;
@@ -2185,6 +2302,7 @@ namespace BankingSystem
             this.btnDeSearch.TabIndex = 10;
             this.btnDeSearch.Text = "Search";
             this.btnDeSearch.UseSelectable = true;
+            this.btnDeSearch.Click += new System.EventHandler(this.btnDeSearch_Click);
             // 
             // txtDeSearchTitle
             // 
@@ -2215,6 +2333,7 @@ namespace BankingSystem
             this.txtDeSeCusName.Name = "txtDeSeCusName";
             this.txtDeSeCusName.Size = new System.Drawing.Size(477, 20);
             this.txtDeSeCusName.TabIndex = 7;
+            this.txtDeSeCusName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeSeCusName_KeyPress);
             // 
             // label19
             // 
@@ -2258,6 +2377,9 @@ namespace BankingSystem
             // 
             // tabTransfer
             // 
+            this.tabTransfer.Controls.Add(this.btnTransConfirm);
+            this.tabTransfer.Controls.Add(this.label81);
+            this.tabTransfer.Controls.Add(this.txtTranAmount);
             this.tabTransfer.Controls.Add(this.grbTo);
             this.tabTransfer.Controls.Add(this.grbFrom);
             this.tabTransfer.Controls.Add(this.panel10);
@@ -2290,7 +2412,7 @@ namespace BankingSystem
             this.grbTo.Controls.Add(this.label32);
             this.grbTo.Location = new System.Drawing.Point(25, 250);
             this.grbTo.Name = "grbTo";
-            this.grbTo.Size = new System.Drawing.Size(678, 167);
+            this.grbTo.Size = new System.Drawing.Size(655, 167);
             this.grbTo.TabIndex = 8;
             this.grbTo.TabStop = false;
             this.grbTo.Text = "To";
@@ -2298,12 +2420,13 @@ namespace BankingSystem
             // btnToSearch
             // 
             this.btnToSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnToSearch.Location = new System.Drawing.Point(586, 108);
+            this.btnToSearch.Location = new System.Drawing.Point(563, 108);
             this.btnToSearch.Name = "btnToSearch";
-            this.btnToSearch.Size = new System.Drawing.Size(86, 33);
+            this.btnToSearch.Size = new System.Drawing.Size(69, 33);
             this.btnToSearch.TabIndex = 16;
             this.btnToSearch.Text = "Search";
             this.btnToSearch.UseSelectable = true;
+            this.btnToSearch.Click += new System.EventHandler(this.btnToSearch_Click);
             // 
             // txtToTitle
             // 
@@ -2312,7 +2435,7 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtToTitle.Location = new System.Drawing.Point(166, 89);
             this.txtToTitle.Name = "txtToTitle";
-            this.txtToTitle.Size = new System.Drawing.Size(414, 20);
+            this.txtToTitle.Size = new System.Drawing.Size(391, 20);
             this.txtToTitle.TabIndex = 14;
             // 
             // txtToBalance
@@ -2322,7 +2445,7 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtToBalance.Location = new System.Drawing.Point(166, 120);
             this.txtToBalance.Name = "txtToBalance";
-            this.txtToBalance.Size = new System.Drawing.Size(414, 20);
+            this.txtToBalance.Size = new System.Drawing.Size(391, 20);
             this.txtToBalance.TabIndex = 15;
             // 
             // txtToNum
@@ -2332,7 +2455,7 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtToNum.Location = new System.Drawing.Point(166, 59);
             this.txtToNum.Name = "txtToNum";
-            this.txtToNum.Size = new System.Drawing.Size(414, 20);
+            this.txtToNum.Size = new System.Drawing.Size(391, 20);
             this.txtToNum.TabIndex = 13;
             // 
             // txtToName
@@ -2342,7 +2465,7 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtToName.Location = new System.Drawing.Point(166, 31);
             this.txtToName.Name = "txtToName";
-            this.txtToName.Size = new System.Drawing.Size(414, 20);
+            this.txtToName.Size = new System.Drawing.Size(391, 20);
             this.txtToName.TabIndex = 12;
             // 
             // label29
@@ -2401,7 +2524,7 @@ namespace BankingSystem
             this.grbFrom.Controls.Add(this.label25);
             this.grbFrom.Location = new System.Drawing.Point(25, 66);
             this.grbFrom.Name = "grbFrom";
-            this.grbFrom.Size = new System.Drawing.Size(678, 167);
+            this.grbFrom.Size = new System.Drawing.Size(655, 167);
             this.grbFrom.TabIndex = 7;
             this.grbFrom.TabStop = false;
             this.grbFrom.Text = "From";
@@ -2409,12 +2532,13 @@ namespace BankingSystem
             // btnFromSearch
             // 
             this.btnFromSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFromSearch.Location = new System.Drawing.Point(586, 105);
+            this.btnFromSearch.Location = new System.Drawing.Point(563, 105);
             this.btnFromSearch.Name = "btnFromSearch";
-            this.btnFromSearch.Size = new System.Drawing.Size(86, 33);
+            this.btnFromSearch.Size = new System.Drawing.Size(69, 33);
             this.btnFromSearch.TabIndex = 11;
             this.btnFromSearch.Text = "Search";
             this.btnFromSearch.UseSelectable = true;
+            this.btnFromSearch.Click += new System.EventHandler(this.btnFromSearch_Click);
             // 
             // txtFromTitle
             // 
@@ -2423,7 +2547,7 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFromTitle.Location = new System.Drawing.Point(166, 89);
             this.txtFromTitle.Name = "txtFromTitle";
-            this.txtFromTitle.Size = new System.Drawing.Size(414, 20);
+            this.txtFromTitle.Size = new System.Drawing.Size(391, 20);
             this.txtFromTitle.TabIndex = 9;
             // 
             // txtFromBalance
@@ -2433,7 +2557,7 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFromBalance.Location = new System.Drawing.Point(166, 120);
             this.txtFromBalance.Name = "txtFromBalance";
-            this.txtFromBalance.Size = new System.Drawing.Size(414, 20);
+            this.txtFromBalance.Size = new System.Drawing.Size(391, 20);
             this.txtFromBalance.TabIndex = 10;
             // 
             // txtFromNum
@@ -2443,7 +2567,7 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFromNum.Location = new System.Drawing.Point(166, 59);
             this.txtFromNum.Name = "txtFromNum";
-            this.txtFromNum.Size = new System.Drawing.Size(414, 20);
+            this.txtFromNum.Size = new System.Drawing.Size(391, 20);
             this.txtFromNum.TabIndex = 8;
             // 
             // txtFromName
@@ -2453,7 +2577,7 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFromName.Location = new System.Drawing.Point(166, 31);
             this.txtFromName.Name = "txtFromName";
-            this.txtFromName.Size = new System.Drawing.Size(414, 20);
+            this.txtFromName.Size = new System.Drawing.Size(391, 20);
             this.txtFromName.TabIndex = 7;
             // 
             // label28
@@ -2502,23 +2626,12 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Controls.Add(this.btnOkTrans);
             this.panel10.Controls.Add(this.textBox25);
             this.panel10.Controls.Add(this.label33);
             this.panel10.Location = new System.Drawing.Point(25, 423);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(678, 0);
             this.panel10.TabIndex = 9;
-            // 
-            // btnOkTrans
-            // 
-            this.btnOkTrans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOkTrans.Location = new System.Drawing.Point(586, 11);
-            this.btnOkTrans.Name = "btnOkTrans";
-            this.btnOkTrans.Size = new System.Drawing.Size(86, 33);
-            this.btnOkTrans.TabIndex = 18;
-            this.btnOkTrans.Text = "Ok";
-            this.btnOkTrans.UseSelectable = true;
             // 
             // textBox25
             // 
@@ -2576,6 +2689,8 @@ namespace BankingSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.txtWithNum);
+            this.panel8.Controls.Add(this.label80);
             this.panel8.Controls.Add(this.btnWithConfirm);
             this.panel8.Controls.Add(this.txtWithAmount);
             this.panel8.Controls.Add(this.label34);
@@ -2593,19 +2708,20 @@ namespace BankingSystem
             // btnWithConfirm
             // 
             this.btnWithConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnWithConfirm.Location = new System.Drawing.Point(556, 164);
+            this.btnWithConfirm.Location = new System.Drawing.Point(556, 195);
             this.btnWithConfirm.Name = "btnWithConfirm";
             this.btnWithConfirm.Size = new System.Drawing.Size(86, 33);
             this.btnWithConfirm.TabIndex = 15;
             this.btnWithConfirm.Text = "Confirm";
             this.btnWithConfirm.UseSelectable = true;
+            this.btnWithConfirm.Click += new System.EventHandler(this.btnWithConfirm_Click);
             // 
             // txtWithAmount
             // 
             this.txtWithAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtWithAmount.Location = new System.Drawing.Point(166, 128);
+            this.txtWithAmount.Location = new System.Drawing.Point(166, 162);
             this.txtWithAmount.Name = "txtWithAmount";
             this.txtWithAmount.Size = new System.Drawing.Size(477, 20);
             this.txtWithAmount.TabIndex = 14;
@@ -2614,7 +2730,7 @@ namespace BankingSystem
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(15, 131);
+            this.label34.Location = new System.Drawing.Point(15, 165);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(155, 20);
             this.label34.TabIndex = 0;
@@ -2625,7 +2741,7 @@ namespace BankingSystem
             this.txtWithBa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtWithBa.Location = new System.Drawing.Point(166, 94);
+            this.txtWithBa.Location = new System.Drawing.Point(166, 127);
             this.txtWithBa.Name = "txtWithBa";
             this.txtWithBa.Size = new System.Drawing.Size(477, 20);
             this.txtWithBa.TabIndex = 13;
@@ -2634,7 +2750,7 @@ namespace BankingSystem
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(15, 97);
+            this.label35.Location = new System.Drawing.Point(15, 130);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(150, 20);
             this.label35.TabIndex = 0;
@@ -2707,6 +2823,7 @@ namespace BankingSystem
             this.btnWithSearch.TabIndex = 10;
             this.btnWithSearch.Text = "Search";
             this.btnWithSearch.UseSelectable = true;
+            this.btnWithSearch.Click += new System.EventHandler(this.btnWithSearch_Click);
             // 
             // txtSearchTitle
             // 
@@ -2723,7 +2840,7 @@ namespace BankingSystem
             this.txtSearchNum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchNum.Location = new System.Drawing.Point(166, 46);
+            this.txtSearchNum.Location = new System.Drawing.Point(166, 43);
             this.txtSearchNum.Name = "txtSearchNum";
             this.txtSearchNum.Size = new System.Drawing.Size(477, 20);
             this.txtSearchNum.TabIndex = 8;
@@ -2737,6 +2854,7 @@ namespace BankingSystem
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.Size = new System.Drawing.Size(477, 20);
             this.txtSearchName.TabIndex = 7;
+            this.txtSearchName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchName_KeyPress);
             // 
             // label38
             // 
@@ -2752,7 +2870,7 @@ namespace BankingSystem
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(15, 49);
+            this.label39.Location = new System.Drawing.Point(15, 46);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(147, 20);
             this.label39.TabIndex = 0;
@@ -2922,6 +3040,7 @@ namespace BankingSystem
             this.txtCBSNum.Name = "txtCBSNum";
             this.txtCBSNum.Size = new System.Drawing.Size(477, 20);
             this.txtCBSNum.TabIndex = 8;
+            this.txtCBSNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCBSNum_KeyPress);
             // 
             // txtCBSName
             // 
@@ -2932,6 +3051,7 @@ namespace BankingSystem
             this.txtCBSName.Name = "txtCBSName";
             this.txtCBSName.Size = new System.Drawing.Size(477, 20);
             this.txtCBSName.TabIndex = 7;
+            this.txtCBSName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCBSName_KeyPress);
             // 
             // label46
             // 
@@ -3038,6 +3158,58 @@ namespace BankingSystem
             this.btnCalculator.Text = "Calculator";
             this.btnCalculator.UseSelectable = true;
             // 
+            // txtWithNum
+            // 
+            this.txtWithNum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtWithNum.Location = new System.Drawing.Point(165, 94);
+            this.txtWithNum.Name = "txtWithNum";
+            this.txtWithNum.Size = new System.Drawing.Size(477, 20);
+            this.txtWithNum.TabIndex = 17;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(14, 97);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(147, 20);
+            this.label80.TabIndex = 16;
+            this.label80.Text = "Account Number:";
+            // 
+            // txtTranAmount
+            // 
+            this.txtTranAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTranAmount.Location = new System.Drawing.Point(191, 441);
+            this.txtTranAmount.Name = "txtTranAmount";
+            this.txtTranAmount.Size = new System.Drawing.Size(414, 20);
+            this.txtTranAmount.TabIndex = 10;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.BackColor = System.Drawing.Color.White;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(42, 441);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(148, 20);
+            this.label81.TabIndex = 11;
+            this.label81.Text = "Transfer Amount:";
+            // 
+            // btnTransConfirm
+            // 
+            this.btnTransConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTransConfirm.Location = new System.Drawing.Point(608, 424);
+            this.btnTransConfirm.Name = "btnTransConfirm";
+            this.btnTransConfirm.Size = new System.Drawing.Size(89, 38);
+            this.btnTransConfirm.TabIndex = 12;
+            this.btnTransConfirm.Text = "Confirm";
+            this.btnTransConfirm.UseSelectable = true;
+            this.btnTransConfirm.Click += new System.EventHandler(this.btnTransConfirm_Click);
+            // 
             // frmAddAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3065,11 +3237,15 @@ namespace BankingSystem
             this.grbUASearch.PerformLayout();
             this.tabAccDetail.ResumeLayout(false);
             this.tabAccDetail.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrProfileAD)).EndInit();
             this.grbADSearch.ResumeLayout(false);
             this.grbADSearch.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.tabTransaction.ResumeLayout(false);
             this.tabTransaction.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvTransaction)).EndInit();
@@ -3077,9 +3253,9 @@ namespace BankingSystem
             this.grbTranSearch.PerformLayout();
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvSearchAcc)).EndInit();
             this.grbSearchAcc.ResumeLayout(false);
             this.grbSearchAcc.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgrvSearchAcc)).EndInit();
             this.tabCuslist.ResumeLayout(false);
             this.tabCuslist.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvCusList)).EndInit();
@@ -3181,7 +3357,6 @@ namespace BankingSystem
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel7;
         private MetroFramework.Controls.MetroButton btnConfirmDe;
-        private System.Windows.Forms.TextBox txtDeAmount;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtDeBalace;
         private System.Windows.Forms.Label label22;
@@ -3219,7 +3394,6 @@ namespace BankingSystem
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel10;
-        private MetroFramework.Controls.MetroButton btnOkTrans;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label24;
@@ -3281,7 +3455,6 @@ namespace BankingSystem
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.DataGridView dtgrvSearchAcc;
         private System.Windows.Forms.DataGridView dtgrvTransaction;
         private System.Windows.Forms.DataGridViewTextBoxColumn accName;
         private System.Windows.Forms.DataGridViewTextBoxColumn accTitile;
@@ -3291,30 +3464,6 @@ namespace BankingSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn from;
         private System.Windows.Forms.DataGridViewTextBoxColumn to;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cusName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dob;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company;
-        private System.Windows.Forms.DataGridViewTextBoxColumn occupation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn balance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.Panel panel14;
         private MetroFramework.Controls.MetroButton btnChangeImage;
         private System.Windows.Forms.PictureBox profilePictr;
@@ -3339,7 +3488,6 @@ namespace BankingSystem
         private MetroFramework.Controls.MetroButton btnSearchAcc;
         private System.Windows.Forms.TextBox txtSAccNumber;
         private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TextBox txtADBalance;
         private System.Windows.Forms.TextBox txtADOccu;
         private System.Windows.Forms.TextBox txtADComName;
@@ -3364,5 +3512,41 @@ namespace BankingSystem
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cusName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn company;
+        private System.Windows.Forms.DataGridViewTextBoxColumn occupation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn balance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pic;
+        private System.Windows.Forms.DataGridView dtgrvSearchAcc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TextBox txtDEAccNumCon;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.TextBox txtDeAmount;
+        private MetroFramework.Controls.MetroButton btnTransConfirm;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.TextBox txtTranAmount;
+        private System.Windows.Forms.TextBox txtWithNum;
+        private System.Windows.Forms.Label label80;
     }
 }

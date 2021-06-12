@@ -49,5 +49,23 @@ namespace BankingSystem.DAO
             string query = string.Format(@"SELECT * FROM dbo.CustomerAccount WHERE  id='" + AccNum + "'");
             return DAO.DataProvider.Instance.ExcuteQuery(query);
         }
+
+        public DataTable CusList()
+        {
+            string query = string.Format("SELECT * FROM dbo.CustomerAccount");
+            return DAO.DataProvider.Instance.ExcuteQuery(query);
+        }
+
+        public bool Deposit(string amount, string num)
+        {
+            string query = string.Format(@"UPDATE dbo.CustomerAccount SET initialdeposit='" + amount + "' WHERE id='" + num + "'");
+            return DAO.DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        public bool Withdraw(string amount, string num)
+        {
+            string query = string.Format(@"UPDATE dbo.CustomerAccount SET initialdeposit='" + amount + "' WHERE id='" + num + "'");
+            return DAO.DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

@@ -48,8 +48,12 @@ namespace BankingSystem.DAO
                 connection.Open();
                 SqlCommand command = connection.CreateCommand();
                 command.CommandText = query;
-                command.Parameters.AddWithValue("@Pic", pic);
+                if (pic != null)
+                {
+                    command.Parameters.AddWithValue("@Pic", pic);
+                }
                 data = command.ExecuteNonQuery();
+                
                 connection.Close();
             }
             return data > 0;
