@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankingSystem.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,7 +36,7 @@ namespace BankingSystem
         private void frmAddAccount_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            dtgrvCusList.DataSource = DAO.AccountDAO.Instance.CusList();
+            getAccounts();
         }
 
         private void frmAddAccount_SizeChanged(object sender, EventArgs e)
@@ -76,10 +77,11 @@ namespace BankingSystem
             MemoryStream stream = new MemoryStream();
             profileptr.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
             byte[] pic = stream.ToArray();
-            if (DAO.AccountDAO.Instance.CreateAccount(name, number, title, type, dob, address, phone, gender, email, company, occupation, initialde, pic))
+            Account acc = new Account(name, number, title, type, dob, address, phone, gender, email, company, occupation, initialde, pic);
+            if (DAO.AccountDAO.Instance.CreateAccount(acc))
             {
                 MessageBox.Show("Thêm tài khoản thành công!");
-                dtgrvCusList.DataSource = DAO.AccountDAO.Instance.CusList();
+                getAccounts();
                 ResetForm();
             }
             else
@@ -142,38 +144,40 @@ namespace BankingSystem
             string name = txtADSearhName.Text;
             string num = txtADSearchNum.Text;
             string title = txtADTitle.Text;
-            dt = DAO.AccountDAO.Instance.SearchAccount(name, num, title);
-            txtADName.Text = dt.Rows[0]["name"].ToString();
-            txtADNum.Text = dt.Rows[0]["id"].ToString();
-            txtADType.Text = dt.Rows[0]["acctype"].ToString();
-            txtADAccTitle.Text = dt.Rows[0]["acctitle"].ToString();
-            txtADDOB.Text = dt.Rows[0]["dob"].ToString();
-            txtADAdd.Text = dt.Rows[0]["address"].ToString();
-            txtADPhone.Text = dt.Rows[0]["phone"].ToString();
-            txtADGender.Text = dt.Rows[0]["gender"].ToString();
-            txtADEmail.Text = dt.Rows[0]["email"].ToString();
-            txtADComName.Text = dt.Rows[0]["company"].ToString();
-            txtADOccu.Text = dt.Rows[0]["occupation"].ToString();
-            txtADBalance.Text = dt.Rows[0]["initialdeposit"].ToString();
-            if (dt.Rows[0]["pic"] != null)
+            Account acc = DTO.Account.Instance.SearchAccount();
+            if (acc != null)
             {
-                DataRow row = dt.Rows[0];
-                ptrProfileAD.Image = ConvertByteArrayToImage((byte[])row["pic"]);
+                txtADName.Text = acc.CusName;
+                txtADNum.Text = acc.AccNum;
+                txtADType.Text = acc.AccType;
+                txtADAccTitle.Text = acc.AccTitle;
+                txtADDOB.Text = acc.DOB1;
+                txtADAdd.Text = acc.Address;
+                txtADPhone.Text = acc.PhoneNum;
+                txtADGender.Text = acc.Gender;
+                txtADEmail.Text = acc.Email;
+                txtADComName.Text = acc.Company;
+                txtADOccu.Text = acc.Occupation;
+                txtADBalance.Text = acc.InitialDe;
+                ptrProfileAD.Image = ConvertByteArrayToImage(acc.Pic);
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản không tồn tại!");
             }
         }
 
         private void btnCBSearch_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
             string name = txtCBSName.Text;
             string num = txtCBSNum.Text;
             string title = txtCBSTitle.Text;
-            dt = DAO.AccountDAO.Instance.SearchAccount(name, num, title);
-            if (dt.Rows.Count>0)
+            Account acc = DTO.Account.Instance.SearchAccount(name, num, title);
+            if (acc!=null)
             {
-                txtCBName.Text = dt.Rows[0]["name"].ToString();
-                txtCBTitle.Text = dt.Rows[0]["acctitle"].ToString();
-                txtCBBalance.Text = dt.Rows[0]["initialdeposit"].ToString();
+                txtCBName.Text = acc.CusName;
+                txtCBTitle.Text = acc.AccTitle;
+                txtCBBalance.Text = acc.InitialDe;
             }
             else
             {
@@ -261,64 +265,6 @@ namespace BankingSystem
             }
             ResetForm();
         }
-        #endregion
-        #region Methods
-        public void ResetForm()
-        {
-            this.txtCusNameCre.Clear();
-            this.txtAccNumCre.Clear();
-            this.txtCreAccTitle.Clear();
-            this.cbCreAccType.SelectedIndex = -1;
-            this.dtCreDate.Value = DateTime.Now;
-            this.txtCreAdd.Clear();
-            this.txtCrePhone.Clear();
-            this.txtUAName.Clear();
-            this.txtUATitle.Clear();
-            this.cbUAType.SelectedIndex = -1;
-            this.txtUAAdd.Clear();
-            this.txtUAPhone.Clear();
-            this.txtUAEmail.Clear();
-            this.txtUACom.Clear();
-            this.txtUAOccu.Clear();
-            this.txtUASearchNum.Clear();
-            this.txtCBSName.Clear();
-            this.txtCBSNum.Clear();
-            this.txtCBSTitle.Clear();
-            if (rabtnMale.Checked == true)
-            { rabtnMale.Checked = false; }
-            else if (rabtnFemale.Checked == true)
-            { rabtnFemale.Checked = false; }
-            else if (rabtnOther.Checked == true)
-            { rabtnOther.Checked = false; }
-            this.txtCreEmail.Clear();
-            this.txtCreCom.Clear();
-            this.txtCreOccu.Clear();
-            this.txtCreDeposit.Clear();
-            this.profileptr.Image = BankingSystem.Properties.Resources._127066563_1053964071708972_5273578564006566232_o;
-            this.profilePictr.Image = BankingSystem.Properties.Resources._127066563_1053964071708972_5273578564006566232_o;
-           
-        }
-        public Image ConvertByteArrayToImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
-
-        public bool IsNumber(string a)
-        {
-            foreach (char c in a)
-            {
-                if (!Char.IsNumber(c))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-        #endregion
-
         private void btnSearchAcc_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
@@ -407,13 +353,13 @@ namespace BankingSystem
             string name = txtDeSeCusName.Text;
             string num = txtDeAccNum.Text;
             string title = txtDeSearchTitle.Text;
-            dt = DAO.AccountDAO.Instance.SearchAccount(name, num, title);
-            if (dt.Rows.Count > 0)
+            Account acc = DTO.Account.Instance.SearchAccount(name, num, title);
+            if (acc != null)
             {
-                txtDeCusName.Text = dt.Rows[0]["name"].ToString();
-                txtDeTitle.Text = dt.Rows[0]["acctitle"].ToString();
-                txtDeBalace.Text = dt.Rows[0]["initialdeposit"].ToString();
-                txtDEAccNumCon.Text = dt.Rows[0]["id"].ToString();
+                txtDeCusName.Text = acc.CusName;
+                txtDeTitle.Text = acc.AccTitle;
+                txtDeBalace.Text = acc.InitialDe;
+                txtDEAccNumCon.Text = acc.AccNum;
             }
             else
             {
@@ -429,10 +375,20 @@ namespace BankingSystem
             int x = Int32.Parse(txtDeBalace.Text);
             int y = Int32.Parse(txtDeAmount.Text);
             x += y;
-            if(DAO.AccountDAO.Instance.Deposit(x.ToString(), txtDEAccNumCon.Text))
+            if (DAO.AccountDAO.Instance.Deposit(x.ToString(), txtDEAccNumCon.Text))
             {
                 MessageBox.Show("Update thành công!");
                 txtDeBalace.Text = x.ToString();
+                Transaction tran = new Transaction();
+                tran.CusName = txtDeCusName.Text;
+                tran.CusNum = txtDEAccNumCon.Text;
+                tran.CusTitle = txtDeTitle.Text;
+                tran.Date = DateTime.Now.ToString();
+                tran.Amount = txtDeAmount.Text;
+                tran.TranType1 = "Deposit";
+                tran.ToAcc1 = "";
+                tran.FromAcc1 = "";
+                DAO.TransactionDAO.Instance.CreateTran(tran);
                 txtDeAmount.Clear();
                 dtgrvCusList.DataSource = DAO.AccountDAO.Instance.CusList();
             }
@@ -448,13 +404,13 @@ namespace BankingSystem
             string name = txtSearchName.Text;
             string num = txtSearchNum.Text;
             string title = txtSearchTitle.Text;
-            dt = DAO.AccountDAO.Instance.SearchAccount(name, num, title);
-            if (dt.Rows.Count > 0)
+            Account acc = DTO.Account.Instance.SearchAccount(name, num, title);
+            if (acc != null)
             {
-                txtWithName.Text = dt.Rows[0]["name"].ToString();
-                txtWithTitle.Text = dt.Rows[0]["acctitle"].ToString();
-                txtWithBa.Text = dt.Rows[0]["initialdeposit"].ToString();
-                txtWithNum.Text = dt.Rows[0]["id"].ToString();
+                txtWithName.Text = acc.CusName;
+                txtWithTitle.Text = acc.AccTitle;
+                txtWithBa.Text = acc.InitialDe;
+                txtWithNum.Text = acc.AccNum;
             }
             else
             {
@@ -474,8 +430,18 @@ namespace BankingSystem
             {
                 MessageBox.Show("Update thành công!");
                 txtWithBa.Text = x.ToString();
+                Transaction tran = new Transaction();
+                tran.CusName = txtWithName.Text;
+                tran.CusNum = txtWithNum.Text;
+                tran.CusTitle = txtWithTitle.Text;
+                tran.Date = DateTime.Now.ToString();
+                tran.Amount = txtWithAmount.Text;
+                tran.TranType1 = "Withdraw";
+                tran.ToAcc1 = "";
+                tran.FromAcc1 = "";
+                DAO.TransactionDAO.Instance.CreateTran(tran);
                 txtWithAmount.Clear();
-                dtgrvCusList.DataSource = DAO.AccountDAO.Instance.CusList();
+                getAccounts();
             }
             else
             {
@@ -489,13 +455,13 @@ namespace BankingSystem
             string name = txtFromName.Text;
             string num = txtFromNum.Text;
             string title = txtFromTitle.Text;
-            dt = DAO.AccountDAO.Instance.SearchAccount(name, num, title);
-            if (dt.Rows.Count > 0)
+            Account acc = DTO.Account.Instance.SearchAccount(name, num, title);
+            if (acc != null)
             {
-                txtFromName.Text = dt.Rows[0]["name"].ToString();
-                txtFromTitle.Text = dt.Rows[0]["acctitle"].ToString();
-                txtFromBalance.Text = dt.Rows[0]["initialdeposit"].ToString();
-                txtFromNum.Text = dt.Rows[0]["id"].ToString();
+                txtFromName.Text = acc.CusName;
+                txtFromTitle.Text = acc.AccTitle;
+                txtFromBalance.Text = acc.InitialDe;
+                txtFromNum.Text = acc.AccNum;
             }
             else
             {
@@ -509,13 +475,13 @@ namespace BankingSystem
             string name = txtToName.Text;
             string num = txtToNum.Text;
             string title = txtToTitle.Text;
-            dt = DAO.AccountDAO.Instance.SearchAccount(name, num, title);
-            if (dt.Rows.Count > 0)
+            Account acc = DTO.Account.Instance.SearchAccount(name, num, title);
+            if (acc != null)
             {
-                txtToName.Text = dt.Rows[0]["name"].ToString();
-                txtToTitle.Text = dt.Rows[0]["acctitle"].ToString();
-                txtToBalance.Text = dt.Rows[0]["initialdeposit"].ToString();
-                txtToNum.Text = dt.Rows[0]["id"].ToString();
+                txtToName.Text = acc.CusName;
+                txtToTitle.Text = acc.AccTitle;
+                txtToBalance.Text = acc.InitialDe;
+                txtToNum.Text = acc.AccNum;
             }
             else
             {
@@ -550,7 +516,16 @@ namespace BankingSystem
                     MessageBox.Show("Chuyển Khoản Thành Công!");
                     txtFromBalance.Text = x.ToString();
                     txtToBalance.Text = z.ToString();
-                    txtTranAmount.Clear();
+                    Transaction tran1 = new Transaction();
+                    tran1.CusName = txtFromName.Text;
+                    tran1.CusNum = txtFromNum.Text;
+                    tran1.CusTitle = txtFromTitle.Text;
+                    tran1.Date = DateTime.Now.ToString();
+                    tran1.Amount = txtTranAmount.Text;
+                    tran1.TranType1 = "Transfer";
+                    tran1.ToAcc1 = txtFromNum.Text;
+                    tran1.FromAcc1 = txtToNum.Text;
+                    DAO.TransactionDAO.Instance.CreateTran(tran1);
                     txtToBalance.Clear();
                     txtToName.Clear();
                     txtToTitle.Clear();
@@ -559,7 +534,8 @@ namespace BankingSystem
                     txtFromName.Clear();
                     txtFromTitle.Clear();
                     txtFromNum.Clear();
-                    dtgrvCusList.DataSource = DAO.AccountDAO.Instance.CusList();
+                    txtTranAmount.Clear();
+                    getAccounts();
                 }
                 else
                 {
@@ -578,5 +554,123 @@ namespace BankingSystem
             txtDEAccNumCon.Clear();
             txtDeBalace.Clear();
         }
+
+        private void btnTransSearch_Click(object sender, EventArgs e)
+        {
+            string num = txtTransNum.Text;
+            dtgrvTransaction.DataSource = DAO.TransactionDAO.Instance.getAccount(num);
+        }
+
+        private void btnCalculator_Click(object sender, EventArgs e)
+        {
+            calculator cal = new calculator();
+            cal.Show();
+        }
+
+        private void btnCurrency_Click(object sender, EventArgs e)
+        {
+            CurrencyConverter form = new CurrencyConverter();
+            form.Show();
+        }
+
+        private void btnNotepad_Click(object sender, EventArgs e)
+        {
+            notepad form = new notepad();
+            form.Show();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            pnlAdmin.Visible = true;
+            dtgrvAdmin.DataSource = DTO.admin.Instance.getData();
+        }
+
+        private void btnCloseAdmin_Click(object sender, EventArgs e)
+        {
+            pnlAdmin.Visible = false;
+        }
+
+        private void btnSaveAdmin_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dtgrvr = dtgrvAdmin.CurrentRow;
+            admin person = new admin();
+            if (string.IsNullOrEmpty(dtgrvr.Cells["Username"].Value.ToString()) || string.IsNullOrEmpty(dtgrvr.Cells["Password"].Value.ToString()))
+            {
+                person.Username = dtgrvr.Cells["Username"].Value.ToString();
+                person.Password = dtgrvr.Cells["Password"].Value.ToString();
+                DTO.admin.Instance.addData(person);
+            }
+            else
+            {
+                person.Username = dtgrvr.Cells["Username"].Value.ToString();
+                person.Password = dtgrvr.Cells["Password"].Value.ToString();
+                DTO.admin.Instance.updateData(person);
+            }
+        }
+        #endregion
+
+        #region Methods
+        public void ResetForm()
+        {
+            this.txtCusNameCre.Clear();
+            this.txtAccNumCre.Clear();
+            this.txtCreAccTitle.Clear();
+            this.cbCreAccType.SelectedIndex = -1;
+            this.dtCreDate.Value = DateTime.Now;
+            this.txtCreAdd.Clear();
+            this.txtCrePhone.Clear();
+            this.txtUAName.Clear();
+            this.txtUATitle.Clear();
+            this.cbUAType.SelectedIndex = -1;
+            this.txtUAAdd.Clear();
+            this.txtUAPhone.Clear();
+            this.txtUAEmail.Clear();
+            this.txtUACom.Clear();
+            this.txtUAOccu.Clear();
+            this.txtUASearchNum.Clear();
+            this.txtCBSName.Clear();
+            this.txtCBSNum.Clear();
+            this.txtCBSTitle.Clear();
+            if (rabtnMale.Checked == true)
+            { rabtnMale.Checked = false; }
+            else if (rabtnFemale.Checked == true)
+            { rabtnFemale.Checked = false; }
+            else if (rabtnOther.Checked == true)
+            { rabtnOther.Checked = false; }
+            this.txtCreEmail.Clear();
+            this.txtCreCom.Clear();
+            this.txtCreOccu.Clear();
+            this.txtCreDeposit.Clear();
+            this.profileptr.Image = BankingSystem.Properties.Resources._127066563_1053964071708972_5273578564006566232_o;
+            this.profilePictr.Image = BankingSystem.Properties.Resources._127066563_1053964071708972_5273578564006566232_o;
+
+        }
+        public Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+        public bool IsNumber(string a)
+        {
+            foreach (char c in a)
+            {
+                if (!Char.IsNumber(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public void getAccounts()
+        {
+            dtgrvCusList.DataSource = DAO.AccountDAO.Instance.CusList();
+        }
+
+        #endregion
     }
+
 }

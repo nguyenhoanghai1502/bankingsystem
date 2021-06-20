@@ -52,8 +52,10 @@ namespace BankingSystem.DAO
                 {
                     command.Parameters.AddWithValue("@Pic", pic);
                 }
-                data = command.ExecuteNonQuery();
-                
+                else
+                {
+                    data = command.ExecuteNonQuery();
+                }
                 connection.Close();
             }
             return data > 0;

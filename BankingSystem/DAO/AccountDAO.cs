@@ -23,18 +23,17 @@ namespace BankingSystem.DAO
         }
         private AccountDAO() { }
 
-        public bool CreateAccount(string name, string number, string title, string type, string dob, string address, string phone,
-            string gender, string email, string company, string occupation, string deposit, byte[] pic)
+        public bool CreateAccount(Account acc)
         {
             string query = string.Format(@"INSERT dbo.CustomerAccount (name, id, gender, address, phone, email," +
-                "company, occupation, initialdeposit, acctitle, acctype, dob, pic) VALUES ( N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}',N'{9}', N'{10}', N'{11}', @Pic)", name, number, gender, address, phone, email,
-                company, occupation, deposit, title, type, dob);
-            return DAO.DataProvider.Instance.ExecuteNonQuery(query, pic);
+                "company, occupation, initialdeposit, acctitle, acctype, dob, pic) VALUES ( N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}',N'{9}', N'{10}', N'{11}', @Pic)", acc.CusName, acc.AccNum, acc.Gender, acc.Address, acc.PhoneNum, acc.Email,
+                acc.Company, acc.Occupation, acc.InitialDe, acc.AccTitle, acc.AccType, acc.DOB1);
+            return DAO.DataProvider.Instance.ExecuteNonQuery(query, acc.Pic);
         }
 
-        public DataTable SearchAccount(string AccName , string AccNum , string AccTitle )
+        public DataTable SearchAccountWithAccName(string AccName)
         {
-            string query = string.Format(@"SELECT * FROM dbo.CustomerAccount WHERE (name='" + AccName + "' OR id='" + AccNum + "' OR acctitle='" + AccTitle + "')");
+            string query = string.Format(@"SELECT * FROM dbo.CustomerAccount WHERE name='" + AccName + "'");
             return DAO.DataProvider.Instance.ExcuteQuery(query);
         }
         public bool UpDateAccount(string name, string title, string number, string type, string address, string phone, string email,
@@ -47,6 +46,11 @@ namespace BankingSystem.DAO
         public DataTable SearchAccountWithAccNum( string AccNum )
         {
             string query = string.Format(@"SELECT * FROM dbo.CustomerAccount WHERE  id='" + AccNum + "'");
+            return DAO.DataProvider.Instance.ExcuteQuery(query);
+        }
+        public DataTable SearchAccountWithAccTitle(string AccTitle)
+        {
+            string query = string.Format(@"SELECT * FROM dbo.CustomerAccount WHERE acctitle='" + AccTitle + "'");
             return DAO.DataProvider.Instance.ExcuteQuery(query);
         }
 

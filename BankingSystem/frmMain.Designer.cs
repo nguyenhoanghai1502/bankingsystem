@@ -32,6 +32,12 @@ namespace BankingSystem
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddAccount));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlAdmin = new System.Windows.Forms.Panel();
+            this.btnSaveAdmin = new MetroFramework.Controls.MetroButton();
+            this.btnCloseAdmin = new MetroFramework.Controls.MetroButton();
+            this.dtgrvAdmin = new System.Windows.Forms.DataGridView();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Watch = new System.Windows.Forms.Panel();
             this.lbDate = new System.Windows.Forms.Label();
             this.lbDay = new System.Windows.Forms.Label();
@@ -210,6 +216,9 @@ namespace BankingSystem
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabTransfer = new MetroFramework.Controls.MetroTabPage();
+            this.btnTransConfirm = new MetroFramework.Controls.MetroButton();
+            this.label81 = new System.Windows.Forms.Label();
+            this.txtTranAmount = new System.Windows.Forms.TextBox();
             this.grbTo = new System.Windows.Forms.GroupBox();
             this.btnToSearch = new MetroFramework.Controls.MetroButton();
             this.txtToTitle = new System.Windows.Forms.TextBox();
@@ -236,6 +245,8 @@ namespace BankingSystem
             this.label24 = new System.Windows.Forms.Label();
             this.tabWithdraw = new MetroFramework.Controls.MetroTabPage();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.txtWithNum = new System.Windows.Forms.TextBox();
+            this.label80 = new System.Windows.Forms.Label();
             this.btnWithConfirm = new MetroFramework.Controls.MetroButton();
             this.txtWithAmount = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -273,16 +284,12 @@ namespace BankingSystem
             this.label49 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdmin = new MetroFramework.Controls.MetroButton();
-            this.btnUserSetting = new MetroFramework.Controls.MetroButton();
             this.btnCurrency = new MetroFramework.Controls.MetroButton();
             this.btnNotepad = new MetroFramework.Controls.MetroButton();
             this.btnCalculator = new MetroFramework.Controls.MetroButton();
-            this.txtWithNum = new System.Windows.Forms.TextBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.txtTranAmount = new System.Windows.Forms.TextBox();
-            this.label81 = new System.Windows.Forms.Label();
-            this.btnTransConfirm = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
+            this.pnlAdmin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvAdmin)).BeginInit();
             this.Watch.SuspendLayout();
             this.tabCreateAcc.SuspendLayout();
             this.tabUpdate.SuspendLayout();
@@ -327,11 +334,67 @@ namespace BankingSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.pnlAdmin);
             this.panel1.Controls.Add(this.Watch);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 699);
             this.panel1.TabIndex = 1;
+            // 
+            // pnlAdmin
+            // 
+            this.pnlAdmin.Controls.Add(this.btnSaveAdmin);
+            this.pnlAdmin.Controls.Add(this.btnCloseAdmin);
+            this.pnlAdmin.Controls.Add(this.dtgrvAdmin);
+            this.pnlAdmin.Location = new System.Drawing.Point(4, 107);
+            this.pnlAdmin.Name = "pnlAdmin";
+            this.pnlAdmin.Size = new System.Drawing.Size(235, 241);
+            this.pnlAdmin.TabIndex = 2;
+            this.pnlAdmin.Visible = false;
+            // 
+            // btnSaveAdmin
+            // 
+            this.btnSaveAdmin.Location = new System.Drawing.Point(130, 197);
+            this.btnSaveAdmin.Name = "btnSaveAdmin";
+            this.btnSaveAdmin.Size = new System.Drawing.Size(86, 35);
+            this.btnSaveAdmin.TabIndex = 4;
+            this.btnSaveAdmin.Text = "Save";
+            this.btnSaveAdmin.UseSelectable = true;
+            this.btnSaveAdmin.Click += new System.EventHandler(this.btnSaveAdmin_Click);
+            // 
+            // btnCloseAdmin
+            // 
+            this.btnCloseAdmin.Location = new System.Drawing.Point(21, 197);
+            this.btnCloseAdmin.Name = "btnCloseAdmin";
+            this.btnCloseAdmin.Size = new System.Drawing.Size(81, 35);
+            this.btnCloseAdmin.TabIndex = 4;
+            this.btnCloseAdmin.Text = "Close";
+            this.btnCloseAdmin.UseSelectable = true;
+            this.btnCloseAdmin.Click += new System.EventHandler(this.btnCloseAdmin_Click);
+            // 
+            // dtgrvAdmin
+            // 
+            this.dtgrvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgrvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Username,
+            this.Password});
+            this.dtgrvAdmin.Location = new System.Drawing.Point(0, 0);
+            this.dtgrvAdmin.Name = "dtgrvAdmin";
+            this.dtgrvAdmin.Size = new System.Drawing.Size(235, 182);
+            this.dtgrvAdmin.TabIndex = 3;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "username";
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
             // 
             // Watch
             // 
@@ -420,7 +483,7 @@ namespace BankingSystem
             this.tabCreateAcc.Margin = new System.Windows.Forms.Padding(0);
             this.tabCreateAcc.Multiline = true;
             this.tabCreateAcc.Name = "tabCreateAcc";
-            this.tabCreateAcc.SelectedIndex = 5;
+            this.tabCreateAcc.SelectedIndex = 3;
             this.tabCreateAcc.Size = new System.Drawing.Size(733, 604);
             this.tabCreateAcc.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabCreateAcc.Style = MetroFramework.MetroColorStyle.Lime;
@@ -916,7 +979,7 @@ namespace BankingSystem
             this.splitContainer1.Panel2.Controls.Add(this.txtADComName);
             this.splitContainer1.Panel2.Controls.Add(this.label66);
             this.splitContainer1.Panel2.Enabled = false;
-            this.splitContainer1.Size = new System.Drawing.Size(684, 292);
+            this.splitContainer1.Size = new System.Drawing.Size(684, 398);
             this.splitContainer1.SplitterDistance = 344;
             this.splitContainer1.TabIndex = 51;
             // 
@@ -1243,54 +1306,62 @@ namespace BankingSystem
             this.to});
             this.dtgrvTransaction.Location = new System.Drawing.Point(33, 178);
             this.dtgrvTransaction.Name = "dtgrvTransaction";
-            this.dtgrvTransaction.Size = new System.Drawing.Size(658, 337);
+            this.dtgrvTransaction.Size = new System.Drawing.Size(658, 402);
             this.dtgrvTransaction.TabIndex = 9;
             // 
             // accName
             // 
             this.accName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.accName.DataPropertyName = "cusName";
             this.accName.HeaderText = "Account Name";
             this.accName.Name = "accName";
             // 
             // accTitile
             // 
             this.accTitile.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.accTitile.DataPropertyName = "cusTitle";
             this.accTitile.HeaderText = "Account Titile";
             this.accTitile.Name = "accTitile";
             // 
             // accNumber
             // 
             this.accNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.accNumber.DataPropertyName = "cusNumber";
             this.accNumber.HeaderText = "Account Number";
             this.accNumber.Name = "accNumber";
             // 
             // tranType
             // 
             this.tranType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tranType.DataPropertyName = "transType";
             this.tranType.HeaderText = "Transaction Type";
             this.tranType.Name = "tranType";
             // 
             // date
             // 
             this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.date.DataPropertyName = "date";
             this.date.HeaderText = "Date";
             this.date.Name = "date";
             // 
             // amount
             // 
             this.amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.amount.DataPropertyName = "amount";
             this.amount.HeaderText = "Amount";
             this.amount.Name = "amount";
             // 
             // from
             // 
             this.from.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.from.DataPropertyName = "fromAcc";
             this.from.HeaderText = "From";
             this.from.Name = "from";
             // 
             // to
             // 
             this.to.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.to.DataPropertyName = "toAcc";
             this.to.HeaderText = "To";
             this.to.Name = "to";
             // 
@@ -1330,6 +1401,7 @@ namespace BankingSystem
             this.btnTransSearch.TabIndex = 8;
             this.btnTransSearch.Text = "Search";
             this.btnTransSearch.UseSelectable = true;
+            this.btnTransSearch.Click += new System.EventHandler(this.btnTransSearch_Click);
             // 
             // txtTransNum
             // 
@@ -1390,9 +1462,9 @@ namespace BankingSystem
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
-            this.dtgrvSearchAcc.Location = new System.Drawing.Point(23, 182);
+            this.dtgrvSearchAcc.Location = new System.Drawing.Point(23, 188);
             this.dtgrvSearchAcc.Name = "dtgrvSearchAcc";
-            this.dtgrvSearchAcc.Size = new System.Drawing.Size(681, 356);
+            this.dtgrvSearchAcc.Size = new System.Drawing.Size(681, 394);
             this.dtgrvSearchAcc.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
@@ -1595,7 +1667,7 @@ namespace BankingSystem
             this.Pic});
             this.dtgrvCusList.Location = new System.Drawing.Point(22, 64);
             this.dtgrvCusList.Name = "dtgrvCusList";
-            this.dtgrvCusList.Size = new System.Drawing.Size(681, 421);
+            this.dtgrvCusList.Size = new System.Drawing.Size(681, 527);
             this.dtgrvCusList.TabIndex = 4;
             // 
             // cusName
@@ -2396,6 +2468,38 @@ namespace BankingSystem
             this.tabTransfer.VerticalScrollbarHighlightOnWheel = false;
             this.tabTransfer.VerticalScrollbarSize = 10;
             // 
+            // btnTransConfirm
+            // 
+            this.btnTransConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTransConfirm.Location = new System.Drawing.Point(608, 424);
+            this.btnTransConfirm.Name = "btnTransConfirm";
+            this.btnTransConfirm.Size = new System.Drawing.Size(89, 38);
+            this.btnTransConfirm.TabIndex = 12;
+            this.btnTransConfirm.Text = "Confirm";
+            this.btnTransConfirm.UseSelectable = true;
+            this.btnTransConfirm.Click += new System.EventHandler(this.btnTransConfirm_Click);
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.BackColor = System.Drawing.Color.White;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(42, 441);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(148, 20);
+            this.label81.TabIndex = 11;
+            this.label81.Text = "Transfer Amount:";
+            // 
+            // txtTranAmount
+            // 
+            this.txtTranAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTranAmount.Location = new System.Drawing.Point(191, 441);
+            this.txtTranAmount.Name = "txtTranAmount";
+            this.txtTranAmount.Size = new System.Drawing.Size(414, 20);
+            this.txtTranAmount.TabIndex = 10;
+            // 
             // grbTo
             // 
             this.grbTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -2704,6 +2808,26 @@ namespace BankingSystem
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(675, 241);
             this.panel8.TabIndex = 7;
+            // 
+            // txtWithNum
+            // 
+            this.txtWithNum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtWithNum.Location = new System.Drawing.Point(165, 94);
+            this.txtWithNum.Name = "txtWithNum";
+            this.txtWithNum.Size = new System.Drawing.Size(477, 20);
+            this.txtWithNum.TabIndex = 17;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(14, 97);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(147, 20);
+            this.label80.TabIndex = 16;
+            this.label80.Text = "Account Number:";
             // 
             // btnWithConfirm
             // 
@@ -3099,116 +3223,61 @@ namespace BankingSystem
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.DimGray;
             this.panel3.Controls.Add(this.btnAdmin);
-            this.panel3.Controls.Add(this.btnUserSetting);
             this.panel3.Controls.Add(this.btnCurrency);
             this.panel3.Controls.Add(this.btnNotepad);
             this.panel3.Controls.Add(this.btnCalculator);
-            this.panel3.Location = new System.Drawing.Point(3, 338);
+            this.panel3.Location = new System.Drawing.Point(3, 348);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(242, 269);
+            this.panel3.Size = new System.Drawing.Size(242, 259);
             this.panel3.TabIndex = 1;
             // 
             // btnAdmin
             // 
+            this.btnAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAdmin.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnAdmin.Location = new System.Drawing.Point(0, 216);
+            this.btnAdmin.Location = new System.Drawing.Point(0, 211);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(242, 51);
             this.btnAdmin.TabIndex = 6;
             this.btnAdmin.Text = "Adminstration setting";
             this.btnAdmin.UseSelectable = true;
-            // 
-            // btnUserSetting
-            // 
-            this.btnUserSetting.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnUserSetting.Location = new System.Drawing.Point(0, 2);
-            this.btnUserSetting.Name = "btnUserSetting";
-            this.btnUserSetting.Size = new System.Drawing.Size(242, 54);
-            this.btnUserSetting.TabIndex = 2;
-            this.btnUserSetting.Text = "User Setting";
-            this.btnUserSetting.UseSelectable = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnCurrency
             // 
+            this.btnCurrency.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCurrency.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnCurrency.Location = new System.Drawing.Point(0, 162);
+            this.btnCurrency.Location = new System.Drawing.Point(0, 157);
             this.btnCurrency.Name = "btnCurrency";
             this.btnCurrency.Size = new System.Drawing.Size(242, 54);
             this.btnCurrency.TabIndex = 5;
             this.btnCurrency.Text = "Currency Converter";
             this.btnCurrency.UseSelectable = true;
+            this.btnCurrency.Click += new System.EventHandler(this.btnCurrency_Click);
             // 
             // btnNotepad
             // 
+            this.btnNotepad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNotepad.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnNotepad.Location = new System.Drawing.Point(0, 108);
+            this.btnNotepad.Location = new System.Drawing.Point(0, 103);
             this.btnNotepad.Name = "btnNotepad";
             this.btnNotepad.Size = new System.Drawing.Size(242, 54);
             this.btnNotepad.TabIndex = 4;
             this.btnNotepad.Text = "Notepad";
             this.btnNotepad.UseSelectable = true;
+            this.btnNotepad.Click += new System.EventHandler(this.btnNotepad_Click);
             // 
             // btnCalculator
             // 
+            this.btnCalculator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCalculator.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnCalculator.Location = new System.Drawing.Point(0, 55);
+            this.btnCalculator.Location = new System.Drawing.Point(0, 50);
             this.btnCalculator.Name = "btnCalculator";
             this.btnCalculator.Size = new System.Drawing.Size(242, 54);
             this.btnCalculator.TabIndex = 3;
             this.btnCalculator.Text = "Calculator";
             this.btnCalculator.UseSelectable = true;
-            // 
-            // txtWithNum
-            // 
-            this.txtWithNum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtWithNum.Location = new System.Drawing.Point(165, 94);
-            this.txtWithNum.Name = "txtWithNum";
-            this.txtWithNum.Size = new System.Drawing.Size(477, 20);
-            this.txtWithNum.TabIndex = 17;
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(14, 97);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(147, 20);
-            this.label80.TabIndex = 16;
-            this.label80.Text = "Account Number:";
-            // 
-            // txtTranAmount
-            // 
-            this.txtTranAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTranAmount.Location = new System.Drawing.Point(191, 441);
-            this.txtTranAmount.Name = "txtTranAmount";
-            this.txtTranAmount.Size = new System.Drawing.Size(414, 20);
-            this.txtTranAmount.TabIndex = 10;
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.BackColor = System.Drawing.Color.White;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(42, 441);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(148, 20);
-            this.label81.TabIndex = 11;
-            this.label81.Text = "Transfer Amount:";
-            // 
-            // btnTransConfirm
-            // 
-            this.btnTransConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTransConfirm.Location = new System.Drawing.Point(608, 424);
-            this.btnTransConfirm.Name = "btnTransConfirm";
-            this.btnTransConfirm.Size = new System.Drawing.Size(89, 38);
-            this.btnTransConfirm.TabIndex = 12;
-            this.btnTransConfirm.Text = "Confirm";
-            this.btnTransConfirm.UseSelectable = true;
-            this.btnTransConfirm.Click += new System.EventHandler(this.btnTransConfirm_Click);
+            this.btnCalculator.Click += new System.EventHandler(this.btnCalculator_Click);
             // 
             // frmAddAccount
             // 
@@ -3226,6 +3295,8 @@ namespace BankingSystem
             this.Load += new System.EventHandler(this.frmAddAccount_Load);
             this.SizeChanged += new System.EventHandler(this.frmAddAccount_SizeChanged);
             this.panel1.ResumeLayout(false);
+            this.pnlAdmin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvAdmin)).EndInit();
             this.Watch.ResumeLayout(false);
             this.Watch.PerformLayout();
             this.tabCreateAcc.ResumeLayout(false);
@@ -3350,7 +3421,6 @@ namespace BankingSystem
         private MetroFramework.Controls.MetroButton btnCurrency;
         private MetroFramework.Controls.MetroButton btnNotepad;
         private MetroFramework.Controls.MetroButton btnCalculator;
-        private MetroFramework.Controls.MetroButton btnUserSetting;
         private System.Windows.Forms.Panel panel5;
         private MetroFramework.Controls.MetroButton btnPicture;
         private System.Windows.Forms.PictureBox profileptr;
@@ -3456,14 +3526,6 @@ namespace BankingSystem
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.DataGridView dtgrvTransaction;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accTitile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tranType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn from;
-        private System.Windows.Forms.DataGridViewTextBoxColumn to;
         private System.Windows.Forms.Panel panel14;
         private MetroFramework.Controls.MetroButton btnChangeImage;
         private System.Windows.Forms.PictureBox profilePictr;
@@ -3548,5 +3610,19 @@ namespace BankingSystem
         private System.Windows.Forms.TextBox txtTranAmount;
         private System.Windows.Forms.TextBox txtWithNum;
         private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accTitile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tranType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn from;
+        private System.Windows.Forms.DataGridViewTextBoxColumn to;
+        private System.Windows.Forms.Panel pnlAdmin;
+        private MetroFramework.Controls.MetroButton btnSaveAdmin;
+        private MetroFramework.Controls.MetroButton btnCloseAdmin;
+        private System.Windows.Forms.DataGridView dtgrvAdmin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }
 }

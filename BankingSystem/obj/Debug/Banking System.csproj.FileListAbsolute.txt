@@ -18,3 +18,6 @@ D:\BankingSystem\BankingSystem\obj\Debug\Banking System.csproj.CoreCompileInputs
 D:\BankingSystem\BankingSystem\obj\Debug\Banking System.csproj.CopyComplete
 D:\BankingSystem\BankingSystem\obj\Debug\BankingSystem.exe
 D:\BankingSystem\BankingSystem\obj\Debug\BankingSystem.pdb
+D:\BankingSystem\BankingSystem\obj\Debug\BankingSystem.calculator.resources
+D:\BankingSystem\BankingSystem\obj\Debug\BankingSystem.CurrencyConverter.resources
+D:\BankingSystem\BankingSystem\obj\Debug\BankingSystem.notepad.resources
